@@ -1,26 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/cbc9b94959.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>GOMarket2</title>
-</head>
-<body>
-    <div class="flex justify-between px-12 pt-6">
-        <img src="source/gomarket.png" alt="gomarketico" class="h-12">
-        <form class="flex " action="#" method="get">
-            <input type="text" placeholder="Buscar productos" class="w-[500px] border-2 border-zinc-500 rounded-l-lg" />
-            <div class="bg-zinc-500 w-[80px] flex justify-center items-center rounded-r-lg text-white">Buscar</div>
-          </form>
-          <div>
-            <div class="flex justify-center items-center bg-yellow-400 h-full p-3 rounded-xl">Llama Ahora</div>
-          </div>
+  </head>
+  <body>
+    <div class="flex justify-between px-12 pt-6 pb-2">
+      <img src="source/gomarket.png" alt="gomarketico" class="h-12" />
+      <form class="flex" action="#" method="get">
+        <input
+          type="text"
+          placeholder="Buscar productos"
+          class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3"
+        />
+        <div
+          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px]"
+        >
+          Buscar
+        </div>
+      </form>
+      <div class="flex justify-center items-center gap-3">
+        <i class="fa-solid fa-phone fa-2xl"></i>
+        <div
+          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex flex-col p-1 w-60 hover:bg-yellow-400"
+        >
+          Llama Ahora!
+          <div class="font-normal">+52 445-155-5152</div>
+        </div>
+      </div>
     </div>
-</body>
+
+    <div class="flex items-center font-semibold justify-between mx-12">
+      <div class="flex h-12">
+        <div
+          class="flex bg-[#fed700] h-full items-center gap-6 px-6 hover:bg-yellow-400 font-bold"
+        >
+          <i class="fa-solid fa-bars fa-lg"></i>
+          Departamentos
+          <i class="fa-solid fa-chevron-down fa-lg"></i>
+        </div>
+        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
+          Compras
+          <i class="fa-solid fa-chevron-down fa-lg"></i>
+        </div>
+        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
+          Pagina
+          <i class="fa-solid fa-chevron-down fa-lg"></i>
+        </div>
+        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
+          Blog
+          <i class="fa-solid fa-chevron-down fa-lg"></i>
+        </div>
+        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
+          Contactanos
+          <i class="fa-solid fa-chevron-down fa-lg"></i>
+        </div>
+      </div>
+      <div class="flex gap-6 pr-20">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <i class="fa-solid fa-heart fa-xl"></i>
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+      </div>
+    </div>
+    <div class="">
+      <div class="flex h-screen justify-center bg-zinc-100">
+        <div class="flex justify-center items-center px-6 hover:bg-zinc-200">
+          <i class="fa-solid fa-chevron-left fa-2xl"></i>
+        </div>
+        <div class="flex flex-col justify-center items-center font-[verdana]">
+          <h2 class="text-blue-500 text-2xl">Oferta por tiempo limitado!</h2>
+          <h2 class="font-semibold text-4xl text-center pb-20">
+            Audifonos Logitech Nose520 Inalambricos
+          </h2>
+          <button
+            class="bg-yellow-400 rounded-md h-12 w-48 font-bold hover:bg-yellow-500"
+          >
+            Comprar
+          </button>
+        </div>
+        <img src="source/audifonos2.jpg" alt="" />
+        <div class="flex justify-center items-center px-6 hover:bg-zinc-200">
+          <i class="fa-solid fa-chevron-right fa-2xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 flex gap-6">
+      <div class="flex flex-col">
+        <div class="flex bg-zinc-100 h-[400px] justify-center items-center">
+          <img src="source/audifonos3.png" alt="audifonos3" class="h-[400px]" />
+          <div>
+            <h2 class="text-blue-500 text-2xl">Recien llegados</h2>
+            <h2 class="font-semibold text-4xl text-center pb-20">
+              Hasta 40$ de descuento
+            </h2>
+          </div>
+        </div>
+        <div class="bg-zinc-100">
+          <div class="flex justify-center items-center">
+            <img src="source/drone.png" alt="" class="h-60"/>
+            <div class="text-center">
+              <h2 class="font-semibold text-xl text-center ">Mini drone DJI Mavic Mini 2 con camara integrada</h2>
+              <h2 class="text-blue-500 text-md">Mas informacion</h2>
+            </div>
+            <img src="source/tablet.png" alt="" class="h-60">
+            <div class="text-center">
+              <h2 class="font-semibold text-xl text-center ">Hasta 30% de descuento en tablets</h2>
+              <h2 class="text-blue-500 text-md">Mas informacion</h2>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="flex justify-center items-center text-center flex-col bg-zinc-100 gap-6">
+        <div class="">
+          <h2 class="font-semibold text-xl text-center">Ventas de liquidación Hasta 45% de descuento</h2>
+          <h2 class="text-blue-500 text-md">Mas informacion</h2>
+        </div>
+        <img src="source/watch4.png" alt="" class="h-60">
+        <div class="">
+          <h2 class="font-semibold text-xl text-center">Ventas de liquidación Hasta 45% de descuento</h2>
+          <h2 class="text-blue-500 text-md">Mas informacion</h2>
+        </div>
+        <img src="source/vr.png" alt="" class="h-60">
+
+      </div>
+    </div>
+  </body>
 </html>
