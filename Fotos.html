@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamonos Travel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navicono">
+            <img src="navigation.png" alt="icono-viajes" class="icono-viajes">
+            <div class="naviconotexto">Vamonos Travel</div>
+        </div>
+        <div class="divnavtitulos">
+            <div class="navinicio" onclick="scrollToTop()">
+                Inicio
+            </div>
+            <div class="navgaleria" onclick="scrollToDiv('idgaleria')">
+                Galeria
+            </div>
+        </div>
+    </nav>
+    <div class="divinicio">
+        <div class="divvamonos">
+            <div class="inicio">
+                <img src="navigation.png" alt="icono-viajes" class="icono-viajes2">
+                <div class="naviconotexto">Vamonos de viaje!</div>
+                <div class="divbotones">
+                    <div class="botonvamos" onclick="scrollToDiv('idgaleria')" id="vamosboton">Vamos!</div>
+                    <div class="botonsabermas">Saber mas...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="galeria" id="idgaleria">
+        <div class="galeriatitulo">Los mejores lugares</div>
+        <div class="imagenes">
+            <div class="doc1" id="taj">
+                <div class="doctitulo">Taj Mahal
+                    <p class="docdescripcion">El Taj Mahal tiene una altura aproximada de sesenta metros, y la cúpula
+                        principal mide veinte metros de diámetro y 25 de altura. En la zona del mausoleo se ...</p>
+                </div>
+            </div>
+            <div class="doc2" id="petra">
+                <div class="doctitulo">Petra
+                    <p class="docdescripcion">Petra (en griego antiguo, Πέτρα, en árabe, البتراء, al-Batrā´) es un
+                        importante enclave arqueológico en Jordania y la capital del antiguo reino nabateo, ...</p>
+                </div>
+            </div>
+            <div class="doc3" id="templo">
+                <div class="doctitulo">Templo Expiatorio
+                    <p class="docdescripcion">Es uno de los monumentos más visitados de España, junto al Museo del Prado
+                        y la Alhambra de Granada,​ y es la iglesia más visitada de Europa tras la basílica de ...</p>
+                </div>
+            </div>
+            <div class="doc4" id="machu">
+                <div class="doctitulo">Machi Picchu
+                    <p class="docdescripcion">Machu Picchu fue construido en el estilo Inca clásico, con paredes de
+                        piedra seca pulida. Sus tres estructuras principales son el Intihuatana, el Templo del Sol ...
+                    </p>
+                </div>
+            </div>
+            <div class="doc5">
+                <div class="doctitulo" id="china">Muralla China
+                    <p class="docdescripcion">La Gran Muralla china es una antigua fortificación china,​ construida y
+                        reconstruida entre el siglo V a. C. y el siglo XVI para proteger la frontera norte ...</p>
+                </div>
+            </div>
+            <div class="doc6">
+                <div class="doctitulo">Torre Eiffel
+                    <p class="docdescripcion">La torre se asienta en un cuadrado de 125 metros de lado, según los mismos
+                        términos del concurso de 1886. Tiene 325 metros de altura con sus 116 antenas; la ...</p>
+                </div>
+            </div>
+            <div class="doc7">
+                <div class="doctitulo">Coliseo
+                    <p class="docdescripcion">El Coliseo, junto con todo el centro histórico de Roma, fue admitido en la
+                        lista del Patrimonio de la Humanidad por la UNESCO en 1980. El 7 de julio de 2007 fue ...</p>
+                </div>
+            </div>
+            <div class="doc8">
+                <div class="doctitulo">Angkor Wat
+                    <p class="docdescripcion">Angkor Wat (/ɑŋkɔr vɔt/ en camboyano: អង្គរវត្ត, Ângkôr Vôtt), escrito
+                        también en ocasiones Angkor Vat, es el templo hinduista más grande y también ...</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        margin: 0%;
+        background-color: #111111;
+    }
+
+  
+    nav {
+        padding: 5px;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(50deg,
+                rgba(255, 255, 255, 0.1) 12%,
+                rgba(255, 255, 255, 0.1) 90%);
+        box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        position: fixed;
+        gap: 500px;
+    }
+
+    .navicono {
+        display: flex;
+    }
+
+    .naviconotexto {
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-style: italic;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+        font-size: 30px;
+    }
+
+    .icono-viajes {
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .icono-viajes2 {
+        height: 100px;
+    }
+
+    .divnavtitulos {
+        display: flex;
+        gap: 50px;
+        margin: 0%;
+    }
+
+    .navinicio {
+        color: white;
+        font-family: sans-serif;
+        font-size: large;
+        font-weight: 600;
+        color: white;
+        transition: color 1s ease 0s;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #vamosboton.scaled {
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.3);
+
+    }
+
+    .navinicio:hover {
+        color: #2678F3;
+        transition: color 1s ease 0s;
+    }
+
+    @media(prefers-reduced-motion) {
+        #vamosboton.scaled {
+            transition: all 1s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+
+    .navgaleria {
+        color: white;
+        font-family: sans-serif;
+        font-size: large;
+        font-weight: 600;
+        transition: color 1s ease 0s;
+    }
+
+    .navgaleria:hover {
+        color: #2678F3;
+        transition: color 1s ease 0s;
+    }
+
+    /*ARREGLOS PARA EL HERO*/
+
+    .divinicio {
+        background-image: url("fondotravel.jpg");
+        background-size: auto 100%;
+        /* auto para que el ancho se ajuste automáticamente */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inicio {
+        width: 500px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .divbotones {
+        display: flex;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .botonvamos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2678F3;
+        border-radius: 10px;
+        height: 40px;
+        width: 150px;
+        color: black;
+        font-size: large;
+        border: solid #194A94;
+        color: #F2F2F2;
+        font-family: sans-serif;
+        transition: background-color 1s ease 0s;
+        transition: border 1s ease 0s;
+    }
+
+    .botonvamos:hover {
+        background-color: #194A94;
+        border: solid #194A94;
+        color: #F2F2F2;
+        transition: background-color 1s ease 0s;
+    }
+
+    .botonsabermas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 40px;
+        width: 150px;
+        border: solid #2678F3;
+        color: #F2F2F2;
+        font-family: sans-serif;
+        transition: background-color 1s ease 0s;
+    }
+
+    .botonsabermas:hover {
+        background-color: #194A94;
+        color: #F2F2F2;
+        border: solid #194A94;
+    }
+
+    /*ARREGLOS PARA LA GALERIA*/
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 800px;
+
+    }
+
+    .galeriatitulo {
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        left: 100px;
+        color: #F2F2F2;
+        font-size: 100px;
+        font-family: fantasy;
+        font-weight: 500;
+        text-shadow: -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000;
+    }
+
+    .imagenes {
+        border: solid red;
+        margin-left: 20px;
+        margin-right: 40px;
+        display: flex;
+        gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*AQUI SON LOS ARREGLOSDE LAS IMAGENES*/
+
+    .doc1 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/taj1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 10px;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc2 {
+        overflow: hidden;
+        background-image: url("imgs/petra.jpg");
+        border: solid black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc3 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/templo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc4 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/machu.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc5 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/china.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc6 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/ifel.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc7 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/coli.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doc8 {
+        overflow: hidden;
+        border: solid black;
+        background-image: url("imgs/ank.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .doctitulo {
+        border-radius: 10px;
+        height: 30px;
+        font-size: 20px;
+        background: linear-gradient(50deg,
+                rgba(255, 255, 255, 0.1) 12%,
+                rgba(255, 255, 255, 0.1) 90%);
+        box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .docdescripcion {
+        color: black;
+        transition: height 1s ease 0s;
+
+    }
+
+    .doctitulo:hover {
+        height: 150px;
+        transition: height 1s ease 0s;
+    }
+
+    .doctitulo:hover .docdescripcion {
+        color: 111111;
+
+    }
+</style>
+
+
+
+<script>
+    var images1 = ['imgs/taj1.jpg', 'imgs/taj2.jpg'];
+    var images2 = ['imgs/petra.jpg', 'imgs/petra2.jpg'];
+    var images3 = ['imgs/templo.jpg', 'imgs/templo2.jpg'];
+    var images4 = ['imgs/machu.jpg', 'imgs/machu2.jpg'];
+    var images5 = ['imgs/china.jpg', 'imgs/china2.jpg'];
+    var images6 = ['imgs/ifel.jpg', 'imgs/ifel2.jpg'];
+    var images7 = ['imgs/coli.jpg', 'imgs/coli2.jpg'];
+    var images8 = ['imgs/ank.jpg', 'imgs/ank2.jpg'];
+
+    var bgImage1 = document.querySelector('.doc1');
+    var bgImage2 = document.querySelector('.doc2');
+    var bgImage3 = document.querySelector('.doc3');
+    var bgImage4 = document.querySelector('.doc4');
+    var bgImage5 = document.querySelector('.doc5');
+    var bgImage6 = document.querySelector('.doc6');
+    var bgImage7 = document.querySelector('.doc7');
+    var bgImage8 = document.querySelector('.doc8');
+
+    var currentIndex = 0;
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % images1.length;
+
+        bgImage1.style.backgroundImage = 'url(' + images1[currentIndex] + ')';
+        bgImage2.style.backgroundImage = 'url(' + images2[currentIndex] + ')';
+        bgImage3.style.backgroundImage = 'url(' + images3[currentIndex] + ')';
+        bgImage4.style.backgroundImage = 'url(' + images4[currentIndex] + ')';
+        bgImage5.style.backgroundImage = 'url(' + images5[currentIndex] + ')';
+        bgImage6.style.backgroundImage = 'url(' + images6[currentIndex] + ')';
+        bgImage7.style.backgroundImage = 'url(' + images7[currentIndex] + ')';
+        bgImage8.style.backgroundImage = 'url(' + images8[currentIndex] + ')';
+    }, 5000);
+
+    bgImage1.addEventListener('transitionend', function () {
+        bgImage1.style.backgroundImage = 'url(' + images1[currentIndex] + ')';
+        bgImage2.style.backgroundImage = 'url(' + images2[currentIndex] + ')';
+        bgImage3.style.backgroundImage = 'url(' + images3[currentIndex] + ')';
+        bgImage4.style.backgroundImage = 'url(' + images4[currentIndex] + ')';
+        bgImage5.style.backgroundImage = 'url(' + images5[currentIndex] + ')';
+        bgImage6.style.backgroundImage = 'url(' + images6[currentIndex] + ')';
+        bgImage7.style.backgroundImage = 'url(' + images7[currentIndex] + ')';
+        bgImage8.style.backgroundImage = 'url(' + images8[currentIndex] + ')';
+    });
+
+    function scrollToDiv(id) {
+        const div = document.getElementById(id);
+        div.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    var myButton = document.getElementById('vamosboton');
+    setInterval(function () {
+        myButton.classList.toggle("scaled");
+    }, 1000);
+
+</script>
