@@ -14,7 +14,12 @@
   </head>
   <body>
     <div class="flex justify-between px-12 pt-20 pb-2 z-2">
-      <img src="source/gomarket.png" alt="gomarketico" class="h-12" />
+      <img
+        src="source/gomarket.png"
+        alt="gomarketico"
+        class="h-12"
+        id="flechatras"
+      />
       <form class="flex" action="#" method="get">
         <input
           type="text"
@@ -70,6 +75,7 @@
         </div>
         <div class="flex gap-6 pr-20">
           <iconify-icon
+            id="admin"
             icon="mdi:account-outline"
             width="30"
             class="hover:text-blue-700"
@@ -83,14 +89,20 @@
             id="carritodecompras"
             icon="material-symbols:shopping-cart-outline"
             width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <iconify-icon
+            id="flechatras"
+            icon="material-symbols:arrow-back"
+            width="30"
             class="hover:text-blue-700 animate-bounce text-red-500"
           ></iconify-icon>
         </div>
       </div>
     </nav>
 
-    <div>
-      <h2 class="flex justify-center items-center py-16 text-2xl">
+    <div class="flex flex-col gap-3">
+      <h2 class="flex justify-center items-center pt-12 text-2xl">
         Tu carrito de compras
       </h2>
       <div
@@ -104,7 +116,8 @@
             </h2>
             <h2 class="text-green-500 py-3">Disponible</h2>
             <h2>Estilo: Cámara Wi-Fi</h2>
-            <h2>Vendido y enviado por Amazon México</h2>
+            <h2>Vendido y enviado por GoMarket México</h2>
+            <h2>Unidades: 1pz</h2>
             <div class="flex text-zinc-500 gap-3 text-sm pt-12">
               <h2 class="hover:text-blue-500">Eliminar</h2>
               <h2>|</h2>
@@ -120,19 +133,24 @@
           <h2>$599.00</h2>
         </div>
       </div>
-      
+
       <div
-        class="flex mx-20 rounded-3xl bg-zinc-100 font-[Verdana] text-zinc-700 justify-between mt-10"
+        class="flex mx-20 rounded-3xl bg-zinc-100 font-[Verdana] text-zinc-700 justify-between"
       >
         <div class="flex">
-          <img src="source/audifonos11.jpg" alt="" class="h-60 w-60 rounded-3xl" />
+          <img
+            src="source/audifonos11.jpg"
+            alt=""
+            class="h-60 w-60 rounded-3xl"
+          />
           <div class="flex flex-col justify-center pl-12">
             <h2 class="text-xl font-semibold pb-3">
-              TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior
+              Sony EX14AP Audífonos con micrófono In-Ear manos libres
             </h2>
             <h2 class="text-green-500 py-3">Disponible</h2>
-            <h2>Estilo: Cámara Wi-Fi</h2>
-            <h2>Vendido y enviado por Amazon México</h2>
+            <h2>Estilo: In-Ear Manos Libres</h2>
+            <h2>Vendido y enviado por GoMarket México</h2>
+            <h2>Unidades: 1pz</h2>
             <div class="flex text-zinc-500 gap-3 text-sm pt-12">
               <h2 class="hover:text-blue-500">Eliminar</h2>
               <h2>|</h2>
@@ -148,19 +166,20 @@
           <h2>$599.00</h2>
         </div>
       </div>
-      
+
       <div
-        class="flex mx-20 rounded-3xl bg-zinc-100 font-[Verdana] text-zinc-700 justify-between mt-10"
+        class="flex mx-20 rounded-3xl bg-zinc-100 font-[Verdana] text-zinc-700 justify-between"
       >
         <div class="flex">
-          <img src="source/hub1.jpg" alt="" class="h-60  w-60 rounded-3xl" />
+          <img src="source/hub1.jpg" alt="" class="h-60 w-60 rounded-3xl" />
           <div class="flex flex-col justify-center pl-12">
             <h2 class="text-xl font-semibold pb-3">
-              TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior
+              Lostrain Hub USB C 3.0, 7 en 2 Adaptador multipuerto Tipo C
             </h2>
             <h2 class="text-green-500 py-3">Disponible</h2>
-            <h2>Estilo: Cámara Wi-Fi</h2>
-            <h2>Vendido y enviado por Amazon México</h2>
+            <h2>Tipo: Multipuerto Tipo C</h2>
+            <h2>Vendido y enviado por GoMarket México</h2>
+            <h2>Unidades: 1pz</h2>
             <div class="flex text-zinc-500 gap-3 text-sm pt-12">
               <h2 class="hover:text-blue-500">Eliminar</h2>
               <h2>|</h2>
@@ -176,5 +195,146 @@
           <h2>$599.00</h2>
         </div>
       </div>
+    </div>
+
+    <div class="flex flex-col py-12 pr-20 font-semibold text-xl text-zinc-700 border-2">
+      <h2 class="flex justify-end">Subtotal: $5,000,000.00</h2>
+      <h2 class="flex justify-end">Menos impuestos: -$4,999,995</h2>
+      <h2 class="flex justify-end">Total: $5.00</h2>
+    </div>
+
+    <div
+      class="flex  border-2 border-red-400 w-full justify-center items-center font-[Verdana] text-zinc-700 w-[50%] font-semibold bg-yellow-400 rounded-md h-10  "
+    >
+      <button id="Comprar">Comprar</button>
+    </div>
+
+    <div class="bg-yellow-400 h-16 flex justify-evenly items-center gap-6">
+      <h2 class="text-xl text-zinc-700">
+        Suscríbase a nuestro boletín informativo
+      </h2>
+      <div class="flex">
+        <input
+          type="text"
+          placeholder="Aqui tu correo"
+          class="w-[600px] border-2 border-zinc-500 rounded-l-sm h-10 px-3 focus:outline-none"
+        />
+        <div
+          class="bg-zinc-700 w-[100px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-10 hover:bg-blue-400"
+        >
+          Suscribirse
+        </div>
+      </div>
+      <div>
+        <iconify-icon
+          icon="mdi:twitter"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:facebook"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:pinterest"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:instagram"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="uil:tumblr-square"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+      </div>
+    </div>
+
+    <footer class="flex justify-evenly p-10">
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Llamanos</h2>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:phone-android-outline"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>Telefono: +52 445-155-5152</h2>
+        </div>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:mail-outline"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>hello@queteimporta.com</h2>
+        </div>
+
+        <h2 class="text-xl font-bold">Encuentranos</h2>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:share-location"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Informacion de la empresa</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mi cuenta</h2>
+          <h2 class="hover:text-blue-500">Seguimiento de pedidos</h2>
+          <h2 class="hover:text-blue-500">Preguntas frecuentes</h2>
+          <h2 class="hover:text-blue-500">Métodos de pago</h2>
+          <h2 class="hover:text-blue-500">Guía de envío</h2>
+          <h2 class="hover:text-blue-500">Productos</h2>
+          <h2 class="hover:text-blue-500">Saldo de la tarjeta regalo</h2>
+          <h2 class="hover:text-blue-500">Contacte con nosotros</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Mas de nosotros</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Acerca de GoMarket</h2>
+          <h2 class="hover:text-blue-500">Garantías</h2>
+          <h2 class="hover:text-blue-500">Condiciones de uso</h2>
+          <h2 class="hover:text-blue-500">Política de privacidad</h2>
+          <h2 class="hover:text-blue-500">Política de devoluciones</h2>
+          <h2 class="hover:text-blue-500">Entrega y devolución</h2>
+          <h2 class="hover:text-blue-500">Mapa del sitio</h2>
+          <h2 class="hover:text-blue-500">Iniciar sesión o registrarse</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Atencion a cliente</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mujer (15)</h2>
+          <h2 class="hover:text-blue-500">Accesorios (16)</h2>
+          <h2 class="hover:text-blue-500">Arte (3)</h2>
+          <h2 class="hover:text-blue-500">Ropa (9)</h2>
+          <h2 class="hover:text-blue-500">Camisas (1)</h2>
+          <h2 class="hover:text-blue-500">Hombre (11)</h2>
+          <h2 class="hover:text-blue-500">Vestidos (9)</h2>
+          <h2 class="hover:text-blue-500">Digital (5)</h2>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<script>
+  var back = document.getElementById("flechatras");
+  back.addEventListener("click", function () {
+    window.location.href = "Gomarket2.html";
+  });
+
+  var admin = document.getElementById("admin");
+  admin.addEventListener("click", function () {
+    window.location.href = "GoM-Admin.html";
+  });
+</script>

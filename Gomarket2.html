@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="flex justify-between px-12 pt-20 pb-2 z-2 ">
-      <img src="source/gomarket.png" alt="gomarketico" class="h-12" />
+      <img src="source/gomarket.png" alt="gomarketico" class="h-12" id="back"/>
       <form class="flex" action="#" method="get">
         <input
           type="text"
@@ -70,6 +70,7 @@
         </div>
         <div class="flex gap-6 pr-20">
           <iconify-icon
+          id="admin"
             icon="mdi:account-outline"
             width="30"
             class="hover:text-blue-700"
@@ -639,8 +640,17 @@
   }
 
   var carro = document.getElementById("carritodecompras");
-
   carro.addEventListener("click", function () {
-    window.location.href = "GoMarketMiCarrito.html"; // Reemplaza esta URL con la página a la que quieres redirigir
+    window.location.href = "GoMarketMiCarrito.html"; 
+  });
+
+  var admin = document.getElementById("admin");
+  admin.addEventListener("click", function () {
+    window.location.href = "GoM-Admin.html"; 
+  });
+
+  var back = document.getElementById("flechatras");
+  back.addEventListener("click", function () {
+    window.location.href = "Gomarket2.html"; 
   });
 </script>
