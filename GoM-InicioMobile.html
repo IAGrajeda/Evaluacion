@@ -14,34 +14,96 @@
   </head>
   <body>
     <div class="flex justify-between items-center mx-6 py-2">
-      <iconify-icon icon="material-symbols:menu" width="30"></iconify-icon>
+      <iconify-icon
+        icon="material-symbols:menu"
+        width="30"
+        id="menu-btn"
+      ></iconify-icon>
       <img src="source/gomarket2.png" alt="gomarketico" class="h-14" />
       <div>
-        <iconify-icon icon="material-symbols:search" width="30"></iconify-icon>
         <iconify-icon
+          icon="material-symbols:search"
+          width="30"
+          id="search"
+        ></iconify-icon>
+        <iconify-icon
+          class="animate-bounce text-red-500"
           icon="material-symbols:shopping-cart-outline"
           width="30"
         ></iconify-icon>
       </div>
     </div>
     <div class="flex w-full border-2">
-      <img
-        src="source/audifonos2.jpg"
-        alt="Audifonos"
-        class="h-[400px] bg-zinc-200 w-full"
-      />
-      <div
-        class="absolute top-[200px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2"
-      >
-        <h2 class="text-blue-500 flex justify-center font-semibold">
-          Solo por tiempo limitado
-        </h2>
-        <h2 class="text-zinc-900 flex justify-center text-center font-semibold">
-          Audifonos Logitech Nose520 Inalambricos
-        </h2>
-        <button class="bg-yellow-400 rounded-sm h-12 mt-10 animate-bounce">
-          Comprar ahora!
-        </button>
+      <div class="flex" id="div1">
+        <iconify-icon
+          id="cambiarDiv"
+          icon="material-symbols:arrow-back-ios-new"
+          width="30"
+          class="bg-zinc-200 flex justify-center items-center"
+        ></iconify-icon>
+        <img
+          src="source/audifonos2.jpg"
+          alt="Audifonos"
+          class="h-[400px] bg-zinc-200 w-full"
+        />
+        <div
+          class="absolute top-[200px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2"
+        >
+          <h2 class="text-blue-500 flex justify-center font-semibold">
+            Solo por tiempo limitado
+          </h2>
+          <h2
+            class="text-zinc-900 flex justify-center text-center font-semibold"
+          >
+            Audifonos Logitech Nose520 Inalambricos
+          </h2>
+          <button class="bg-yellow-400 rounded-sm h-12 mt-10">
+            Comprar ahora!
+          </button>
+        </div>
+        <iconify-icon
+          id="cambiarDiv"
+          icon="material-symbols:arrow-back-ios-new"
+          width="30"
+          flip="horizontal"
+          class="hover:bg-zinc-400 bg-zinc-200 flex justify-center items-center"
+        ></iconify-icon>
+      </div>
+
+      <div class="flex hidden" id="div2">
+        <iconify-icon
+        id="cambiarDiv2"
+          icon="material-symbols:arrow-back-ios-new"
+          width="30"
+          class="bg-zinc-200 flex justify-center items-center"
+        ></iconify-icon>
+        <img
+          src="source/vr.png"
+          alt="vr"
+          class="h-[400px] bg-zinc-200 w-full"
+        />
+        <div
+          class="absolute top-[200px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2"
+        >
+          <h2 class="text-blue-500 flex justify-center font-semibold">
+            Solo por tiempo limitado
+          </h2>
+          <h2
+            class="text-zinc-900 flex justify-center text-center font-semibold"
+          >
+          Sony Playstation VR2 Cuh-ZVR2
+          </h2>
+          <button class="bg-yellow-400 rounded-sm h-12 mt-10">
+            Comprar ahora!
+          </button>
+        </div>
+        <iconify-icon
+        id="cambiarDiv"
+          icon="material-symbols:arrow-back-ios-new"
+          width="30"
+          flip="horizontal"
+          class="bg-zinc-200 flex justify-center items-center"
+        ></iconify-icon>
       </div>
     </div>
 
@@ -65,6 +127,100 @@
         <img src="source/audifonos3.png" alt="audifonos3" class="h-[300px]" />
       </div>
     </div>
+
+    <div
+      id="menu"
+      class="fixed left-0 top-0 h-full w-64 bg-gray-700 transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <button id="close-btn" class="p-2 bg-gray-500 w-full text-white">
+        Cerrar menú
+      </button>
+      <div class="flex flex-col m-6 text-white font-semibold">
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon icon="material-symbols:home" width="30"></iconify-icon>
+          <h2>Inicio</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="material-symbols:shopping-basket-outline"
+            width="30"
+          ></iconify-icon>
+          <h2>Tienda</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="mdi:book-open-page-variant-outline"
+            width="30"
+          ></iconify-icon>
+          <h2>Pagina</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="material-symbols:favorite-outline"
+            width="30"
+          ></iconify-icon>
+          <h2>Favoritos</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon icon="mdi:account-outline" width="30"></iconify-icon>
+          <h2>Iniciar Sesion</h2>
+        </div>
+
+        <div class="p-2 mt-16 flex font-semibold items-center gap-2">
+          <div class="flex items-center">
+            <iconify-icon
+              icon="material-symbols:phone-enabled-sharp"
+              width="30"
+              flip="horizontal"
+            ></iconify-icon>
+            <h2>Contacto</h2>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start text-sm items-center font-normal"
+        >
+          <div class="flex items-center">
+            <iconify-icon
+              icon="material-symbols:phone-android-outline"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>Telefono: +52 445-155-5152</h2>
+          </div>
+        </div>
+        <div class="flex flex-col text-sm items-center font-normal">
+          <div class="flex justify-start items-center">
+            <iconify-icon
+              icon="material-symbols:mail-outline"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>hello@queteimporta.com</h2>
+          </div>
+        </div>
+        <div class="flex flex-col text-sm items-center font-normal">
+          <div class="flex justify-start items-center">
+            <iconify-icon
+              icon="material-symbols:share-location"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="mx-6">
       <div class="flex bg-zinc-200">
         <div class="flex flex-col justify-center items-center">
@@ -406,7 +562,7 @@
 
     <footer class="flex justify-start">
       <div class="flex flex-col text-zinc-700 justify-center items-center pt-6">
-        <div class="flex flex-col text-zinc-700 ">
+        <div class="flex flex-col text-zinc-700">
           <h2 class="text-xl font-bold">Informacion</h2>
           <h2 class="text-xl font-bold">de la Empresa</h2>
           <div class="">
@@ -446,36 +602,62 @@
             <h2 class="hover:text-blue-500">Digital (5)</h2>
           </div>
         </div>
-        <div class="flex flex-col  px-6">
-            <h2 class="font-bold">Llamanos</h2>
-        <div class="flex pl-6">
-          <iconify-icon
-            icon="material-symbols:phone-android-outline"
-            width="30"
-            class="text-zinc-600"
-          ></iconify-icon>
-          <h2>Telefono: +52 445-155-5152</h2>
-        </div>
-        <div class="flex pl-6">
-          <iconify-icon
-            icon="material-symbols:mail-outline"
-            width="30"
-            class="text-zinc-600"
-          ></iconify-icon>
-          <h2>hello@queteimporta.com</h2>
-        </div>
+        <div class="flex flex-col px-6">
+          <h2 class="font-bold">Llamanos</h2>
+          <div class="flex pl-6">
+            <iconify-icon
+              icon="material-symbols:phone-android-outline"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>Telefono: +52 445-155-5152</h2>
+          </div>
+          <div class="flex pl-6">
+            <iconify-icon
+              icon="material-symbols:mail-outline"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>hello@queteimporta.com</h2>
+          </div>
 
-        <h2 class=" font-bold">Encuentranos</h2>
-        <div class="flex pl-6">
-          <iconify-icon
-            icon="material-symbols:share-location"
-            width="30"
-            class="text-zinc-600"
-          ></iconify-icon>
-          <h2>Calle: Midwitch, Silent Hill, EU.</h2>
-        </div>
+          <h2 class="font-bold">Encuentranos</h2>
+          <div class="flex pl-6">
+            <iconify-icon
+              icon="material-symbols:share-location"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+          </div>
         </div>
       </div>
     </footer>
   </body>
 </html>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("-translate-x-full");
+  });
+
+  const closeBtn = document.getElementById("close-btn");
+  const menu2 = document.getElementById("menu");
+
+  closeBtn.addEventListener("click", () => {
+    menu2.classList.add("-translate-x-full");
+  });
+
+  document.getElementById("cambiarDiv").addEventListener("click", function () {
+    document.getElementById("div1").classList.toggle("hidden");
+    document.getElementById("div2").classList.toggle("hidden");
+  });
+
+  document.getElementById("cambiarDiv2").addEventListener("click", function () {
+    document.getElementById("div2").classList.toggle("hidden");
+    document.getElementById("div1").classList.toggle("hidden");
+  });
+</script>
