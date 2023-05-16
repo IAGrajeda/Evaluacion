@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script
       src="https://kit.fontawesome.com/cbc9b94959.js"
       crossorigin="anonymous"
@@ -12,16 +13,16 @@
     <title>GOMarket2</title>
   </head>
   <body>
-    <div class="flex justify-between px-12 pt-6 pb-2">
+    <div class="flex justify-between px-12 pt-20 pb-2 z-2 ">
       <img src="source/gomarket.png" alt="gomarketico" class="h-12" />
       <form class="flex" action="#" method="get">
         <input
           type="text"
           placeholder="Buscar productos"
-          class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3"
+          class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3 hover:border-yellow-400 focus:border-yellow-400 focus:outline-none"
         />
         <div
-          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px]"
+          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700"
         >
           Buscar
         </div>
@@ -29,7 +30,7 @@
       <div class="flex justify-center items-center gap-3">
         <i class="fa-solid fa-phone fa-2xl"></i>
         <div
-          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex flex-col p-1 w-60 hover:bg-yellow-400"
+          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white"
         >
           Llama Ahora!
           <div class="font-normal">+52 445-155-5152</div>
@@ -37,101 +38,609 @@
       </div>
     </div>
 
-    <div class="flex items-center font-semibold justify-between mx-12">
-      <div class="flex h-12">
+    <nav class="fixed top-0 w-full bg-zinc-200">
+      <div class="flex items-center font-semibold justify-between mx-12">
+        <div class="flex h-12">
+          <div
+            class="flex bg-[#fed700] h-full items-center gap-6 px-6 transition-all duration-700 hover:bg-yellow-500 font-bold"
+          >
+            <i class="fa-solid fa-bars fa-lg"></i>
+            Departamentos
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Compras
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Pagina
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Blog
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Contactanos
+          </div>
+        </div>
+        <div class="flex gap-6 pr-20">
+          <iconify-icon
+            icon="mdi:account-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:cards-heart-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <iconify-icon
+            id="carritodecompras"
+            icon="material-symbols:shopping-cart-outline"
+            width="30"
+            class="hover:text-blue-700 animate-bounce"
+          ></iconify-icon>
+        </div>
+      </div>
+    </nav>
+
+    <div class=" " id="div1">
+      <div class="flex h-screen justify-center items-center bg-zinc-100">
         <div
-          class="flex bg-[#fed700] h-full items-center gap-6 px-6 hover:bg-yellow-400 font-bold"
+          class="flex justify-center items-center px-6 hover:bg-zinc-200 h-full"
+          id="cambiarDiv"
         >
-          <i class="fa-solid fa-bars fa-lg"></i>
-          Departamentos
-          <i class="fa-solid fa-chevron-down fa-lg"></i>
-        </div>
-        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
-          Compras
-          <i class="fa-solid fa-chevron-down fa-lg"></i>
-        </div>
-        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
-          Pagina
-          <i class="fa-solid fa-chevron-down fa-lg"></i>
-        </div>
-        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
-          Blog
-          <i class="fa-solid fa-chevron-down fa-lg"></i>
-        </div>
-        <div class="flex gap-3 items-center h-full px-6 hover:bg-zinc-200">
-          Contactanos
-          <i class="fa-solid fa-chevron-down fa-lg"></i>
-        </div>
-      </div>
-      <div class="flex gap-6 pr-20">
-        <i class="fa-solid fa-user fa-xl"></i>
-        <i class="fa-solid fa-heart fa-xl"></i>
-        <i class="fa-solid fa-cart-shopping fa-xl"></i>
-      </div>
-    </div>
-    <div class="">
-      <div class="flex h-screen justify-center bg-zinc-100">
-        <div class="flex justify-center items-center px-6 hover:bg-zinc-200">
           <i class="fa-solid fa-chevron-left fa-2xl"></i>
         </div>
-        <div class="flex flex-col justify-center items-center font-[verdana]">
-          <h2 class="text-blue-500 text-2xl">Oferta por tiempo limitado!</h2>
-          <h2 class="font-semibold text-4xl text-center pb-20">
+        <div class="flex flex-col justify-center items-center font-[verdana];">
+          <h2 class="text-blue-500 text-2xl animate-fall">
+            Oferta por tiempo limitado!
+          </h2>
+          <h2 class="font-semibold text-4xl text-center pb-20 animate-fall">
             Audifonos Logitech Nose520 Inalambricos
           </h2>
           <button
-            class="bg-yellow-400 rounded-md h-12 w-48 font-bold hover:bg-yellow-500"
+            class="bg-yellow-400 rounded-md h-12 w-48 font-bold transition-all duration-500 hover:bg-zinc-500 hover:text-white"
           >
             Comprar
           </button>
         </div>
-        <img src="source/audifonos2.jpg" alt="" />
-        <div class="flex justify-center items-center px-6 hover:bg-zinc-200">
+        <div class="flex w-[700px]">
+          <img
+            src="source/audifonos2.jpg"
+            alt=""
+            class="transition-transform duration-700  hover:scale-110"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center px-6 hover:bg-zinc-200 h-full"
+          id="cambiarDiv"
+        >
           <i class="fa-solid fa-chevron-right fa-2xl"></i>
         </div>
       </div>
     </div>
 
-    <div class="mt-10 flex gap-6">
+    <div class="hidden" id="div2">
+      <div class="flex h-screen justify-center items-center bg-zinc-100">
+        <div
+          class="flex justify-center items-center px-6 hover:bg-zinc-200 h-full"
+          id="cambiarDiv"
+        >
+          <i class="fa-solid fa-chevron-left fa-2xl"></i>
+        </div>
+        <div class="flex flex-col justify-center items-center font-[verdana] ;">
+          <h2 class="text-blue-500 text-2xl animate-fall">
+            Oferta por tiempo limitado!
+          </h2>
+          <h2 class="font-semibold text-4xl text-center pb-20 animate-fall">
+            Sony Playstation VR2 Cuh-ZVR2
+          </h2>
+          <button
+            class="bg-yellow-400 rounded-md h-12 w-48 font-bold transition-all duration-500 hover:bg-zinc-500 hover:text-white"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="flex truncate w-[700px]">
+          <img
+            src="source/vr.png"
+            alt=""
+            class="transition-transform duration-700 transform hover:scale-110"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center px-6 hover:bg-zinc-200 h-full"
+          id="cambiarDiv2"
+        >
+          <i class="fa-solid fa-chevron-right fa-2xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-6 mx-60 my-10 text-zinc-700">
       <div class="flex flex-col">
-        <div class="flex bg-zinc-100 h-[400px] justify-center items-center">
+        <div
+          class="flex bg-zinc-100 h-[400px] justify-center items-center hover:scale-105 transition-transform duration-700"
+        >
           <img src="source/audifonos3.png" alt="audifonos3" class="h-[400px]" />
-          <div>
+          <div class="text-center">
             <h2 class="text-blue-500 text-2xl">Recien llegados</h2>
             <h2 class="font-semibold text-4xl text-center pb-20">
               Hasta 40$ de descuento
             </h2>
+            <button
+              class="bg-yellow-400 rounded-md h-12 w-48 font-bold transition-all duration-700 hover:bg-zinc-500 hover:text-white"
+            >
+              Comprar
+            </button>
           </div>
         </div>
-        <div class="bg-zinc-100">
+        <div
+          class="bg-zinc-100 mt-10 p-10 text-zinc-700 hover:scale-105 transition-transform duration-700"
+        >
           <div class="flex justify-center items-center">
-            <img src="source/drone.png" alt="" class="h-60"/>
+            <img src="source/drone.png" alt="" class="h-60" />
             <div class="text-center">
-              <h2 class="font-semibold text-xl text-center ">Mini drone DJI Mavic Mini 2 con camara integrada</h2>
-              <h2 class="text-blue-500 text-md">Mas informacion</h2>
+              <h2 class="font-semibold text-md text-center">
+                Mini drone DJI Mavic Mini 2 con camara integrada
+              </h2>
+              <h2
+                class="text-blue-500 text-sm hover:underline hover:text-blue-700"
+              >
+                Mas informacion...
+              </h2>
             </div>
-            <img src="source/tablet.png" alt="" class="h-60">
+            <img src="source/tablet.png" alt="" class="h-60" />
             <div class="text-center">
-              <h2 class="font-semibold text-xl text-center ">Hasta 30% de descuento en tablets</h2>
-              <h2 class="text-blue-500 text-md">Mas informacion</h2>
+              <h2 class="font-semibold text-md text-center">
+                Hasta 30% de descuento en tablets
+              </h2>
+              <h2 class="text-blue-500 text-sm">Mas informacion</h2>
             </div>
           </div>
         </div>
-        
       </div>
-      <div class="flex justify-center items-center text-center flex-col bg-zinc-100 gap-6">
-        <div class="">
-          <h2 class="font-semibold text-xl text-center">Ventas de liquidación Hasta 45% de descuento</h2>
+      <div
+        class="flex justify-center items-center text-center flex-col bg-zinc-100 hover:scale-105 transition-transform duration-700"
+      >
+        <div class=" ">
+          <h2 class="font-semibold text-xl text-center">
+            Ventas de liquidación Hasta 45% de descuento
+          </h2>
           <h2 class="text-blue-500 text-md">Mas informacion</h2>
         </div>
-        <img src="source/watch4.png" alt="" class="h-60">
+        <img src="source/watch4.png" alt="" class="h-60" />
         <div class="">
-          <h2 class="font-semibold text-xl text-center">Ventas de liquidación Hasta 45% de descuento</h2>
+          <h2 class="font-semibold text-xl text-center">
+            Ventas de liquidación Hasta 45% de descuento
+          </h2>
           <h2 class="text-blue-500 text-md">Mas informacion</h2>
         </div>
-        <img src="source/vr.png" alt="" class="h-60">
-
+        <img src="source/vr.png" alt="" class="h-60" />
       </div>
     </div>
+
+    <div class="text-center justify-center">
+      <h2 class="font-[Verdana] font-semibold text-2xl text-zinc-700">
+        Recien llegados
+      </h2>
+      <div
+        class="flex justify-center gap-20 text-zinc-700 font-semibold pt-3 text-lg"
+      >
+        <h2 class="hover:text-blue-500 transition-colors duration-700">
+          Nuevos Productos
+        </h2>
+        <h2 class="hover:text-blue-500 transition-colors duration-700">
+          Productos Destacados
+        </h2>
+        <h2 class="hover:text-blue-500 transition-colors duration-700">
+          Productos en Oferta
+        </h2>
+        <h2 class="hover:text-blue-500 transition-colors duration-700">
+          Productos en Tendencia
+        </h2>
+      </div>
+      <div class="flex justify-between items-center px-12 h-[360px]">
+        <div
+          class="flex flex-col items-center justify-center"
+          onmouseover="cambiarImagenCamara(false)"
+          onmouseout="cambiarImagenCamara(true)"
+        >
+          <img
+            id="imagenCamara"
+            src="source/camara1.jpg"
+            alt=""
+            class="h-60 hover-scale"
+          />
+          <div class="">
+            TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior
+          </div>
+          <div class="flex justify-center gap-6">
+            <div class="text-red-500">$599.00</div>
+            <div class="text-zinc-500 font line-through">$799.00</div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center"
+          onmouseover="cambiarImagenBocina(false)"
+          onmouseout="cambiarImagenBocina(true)"
+        >
+          <img
+            id="imagenBocina"
+            src="source/bocina1.jpg"
+            alt=""
+            class="h-60 w-60 hover-scale"
+          />
+          <div class="">JBL Bocina Portátil GO 2 Bluetooth - Gris</div>
+          <div class="flex justify-center gap-6">
+            <div class="text-red-500">$599.00</div>
+            <div class="text-zinc-500 font line-through">$799.00</div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center"
+          onmouseover="cambiarImagenAudifonos(false)"
+          onmouseout="cambiarImagenAudifonos(true)"
+        >
+          <img
+            id="imagenAudifonos"
+            src="source/audifonos22.jpg"
+            alt=""
+            class="h-60 hover-scale"
+          />
+          <div class="">
+            Sony EX14AP Audífonos con micrófono In-Ear manos libres
+          </div>
+          <div class="flex justify-center gap-6">
+            <div class="text-red-500">$599.00</div>
+            <div class="text-zinc-500 font line-through">$799.00</div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center"
+          onmouseover="cambiarImagenHub(false)"
+          onmouseout="cambiarImagenHub(true)"
+        >
+          <img
+            id="imagenHub"
+            src="source/hub1.jpg"
+            alt=""
+            class="h-60 hover-scale"
+          />
+          <div class="">
+            Lostrain Hub USB C 3.0, 7 en 2 Adaptador multipuerto Tipo C
+          </div>
+          <div class="flex justify-center gap-6">
+            <div class="text-red-500">$599.00</div>
+            <div class="text-zinc-500 font line-through">$799.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center text-4xl bg-yellow-400 my-20">
+      aqui va el componente de marcos
+    </div>
+
+    <div
+      class="flex flex-col justify-center items-center font-[Verdana] bg-zinc-100 px-6"
+    >
+      <h2 class="text-4xl pt-6">Tips y secretos</h2>
+      <div class="flex gap-12 py-10">
+        <div
+          class="flex flex-col w-[400px] hover:bg-zinc-200 hover:scale-105 transition-transform duration-700"
+        >
+          <img src="source/finmundo.jpg" alt="finmundo" class="h-60" />
+          <div class="px-3">
+            <h2 class="text-xl text-left pt-3 text-zinc-700 py-3">
+              Se acerca el fin del mundo
+            </h2>
+            <div class="flex items-center gap-3 text-zinc-500 pb-3">
+              <div class="bg-blue-500 rounded-md p-2 text-white">
+                Abril, 26 2023
+              </div>
+              <h2>Posteado por: Alex Marin</h2>
+            </div>
+            <div class="flex text-zinc-700 text-sm">
+              De repente, los animales se unen a la fiesta apocalíptica: los
+              gatos se ponen a hacer breakdance, los perros se disfrazan de
+              superhéroes y las vacas se lanzan al cielo montadas en
+              trampolines. Incluso los dinosaurios, sí, esos que se suponía que
+              estaban extintos, deciden regresar para participar en el último
+              episodio de "¿Quién quiere ser un meteorito millonario?".
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-[400px] hover:bg-zinc-200 hover:scale-105 transition-transform duration-700"
+        >
+          <img src="source/atrabajar.jpg" alt="finmundo" class="h-60" />
+          <div class="px-3">
+            <h2 class="text-xl text-left pt-3 text-zinc-700 py-2">
+              A trabajar de una vez
+            </h2>
+            <div class="flex items-center gap-3 text-zinc-500 pb-3">
+              <div class="bg-blue-500 rounded-md p-2 text-white">
+                Junio, 26 2023
+              </div>
+              <h2>Posteado por: La sinegrita</h2>
+            </div>
+            <div class="flex text-zinc-700 text-sm">
+              Imagina un circo de pingüinos malabaristas en monociclos,
+              equilibrando tazas de café humeantes mientras bailan salsa con
+              trajes de negocios. El jefe es un pulpo parlante que dicta sus
+              instrucciones en idioma de ranas y los informes se envían a través
+              de palomas mensajeras vestidas de corbatas brillantes. Los
+              escritorios son montañas de gelatina, los bolígrafos son brotes
+              de...
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-[400px] hover:bg-zinc-200 hover:scale-105 transition-transform duration-700"
+        >
+          <img src="source/interior.jpg" alt="finmundo" class="h-60" />
+          <div class="px-3">
+            <h2 class="text-xl text-left pt-3 text-zinc-700 py-2">
+              Decoracion de interiores profesional
+            </h2>
+            <div class="flex items-center gap-3 text-zinc-500 pb-3">
+              <div class="bg-blue-500 rounded-md p-2 text-white">
+                Abril, 26 2023
+              </div>
+              <h2>Posteado por: Elsa pato</h2>
+            </div>
+            <div class="flex text-zinc-700 text-sm">
+              decoración de interiores donde las paredes están cubiertas de
+              burbujas de chicle multicolores, los muebles son globos gigantes
+              que flotan en el aire y las lámparas se componen de calcetines
+              desparejados que emiten destellos de luz intermitentes. Los suelos
+              están hechos de nubes esponjosas que te hacen saltar de un lugar a
+              otro, y las cortinas son cortes de pizza.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex py-10 justify-between items-center px-40 gap-12 font-[verdana] text-sm text-zinc-700"
+    >
+      <div class="flex justify-center items-center gap-3">
+        <iconify-icon icon="mdi:truck-fast" width="60"></iconify-icon>
+        <div class="flex flex-col">
+          <h2>Envio gratis a todo el mundo</h2>
+          <h2>En todas las ordenes de mas de $75,000</h2>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        <iconify-icon icon="mdi:auto-pay" width="60"></iconify-icon>
+        <div class="flex flex-col">
+          <h2>Pago 100% seguro</h2>
+          <h2>Garantizamos un pago seguro con</h2>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        <iconify-icon icon="mdi:alarm-clock" width="60"></iconify-icon>
+        <div class="flex flex-col">
+          <h2>Devolución en 30 días</h2>
+          <h2>Devuélvalo en un plazo de 20 días para un cambio</h2>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        <iconify-icon icon="mdi:support" width="60"></iconify-icon>
+        <div class="flex flex-col">
+          <h2>Asistencia 24/7</h2>
+          <h2>Asistencia 24 horas al día</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-yellow-400 h-16 flex justify-evenly items-center gap-6">
+      <h2 class="text-xl text-zinc-700">
+        Suscríbase a nuestro boletín informativo
+      </h2>
+      <div class="flex">
+        <input
+          type="text"
+          placeholder="Aqui tu correo"
+          class="w-[600px] border-2 border-zinc-500 rounded-l-sm h-10 px-3 focus:outline-none"
+        />
+        <div
+          class="bg-zinc-700 w-[100px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-10 hover:bg-blue-400"
+        >
+          Suscribirse
+        </div>
+      </div>
+      <div>
+        <iconify-icon
+          icon="mdi:twitter"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:facebook"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:pinterest"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:instagram"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="uil:tumblr-square"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+      </div>
+    </div>
+
+    <footer class="flex justify-evenly p-10">
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Llamanos</h2>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:phone-android-outline"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>Telefono: +52 445-155-5152</h2>
+        </div>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:mail-outline"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>hello@queteimporta.com</h2>
+        </div>
+
+        <h2 class="text-xl font-bold">Encuentranos</h2>
+        <div class="flex pl-6">
+          <iconify-icon
+            icon="material-symbols:share-location"
+            width="30"
+            class="text-zinc-600"
+          ></iconify-icon>
+          <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Informacion de la empresa</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mi cuenta</h2>
+          <h2 class="hover:text-blue-500">Seguimiento de pedidos</h2>
+          <h2 class="hover:text-blue-500">Preguntas frecuentes</h2>
+          <h2 class="hover:text-blue-500">Métodos de pago</h2>
+          <h2 class="hover:text-blue-500">Guía de envío</h2>
+          <h2 class="hover:text-blue-500">Productos</h2>
+          <h2 class="hover:text-blue-500">Saldo de la tarjeta regalo</h2>
+          <h2 class="hover:text-blue-500">Contacte con nosotros</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Mas de nosotros</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Acerca de GoMarket</h2>
+          <h2 class="hover:text-blue-500">Garantías</h2>
+          <h2 class="hover:text-blue-500">Condiciones de uso</h2>
+          <h2 class="hover:text-blue-500">Política de privacidad</h2>
+          <h2 class="hover:text-blue-500">Política de devoluciones</h2>
+          <h2 class="hover:text-blue-500">Entrega y devolución</h2>
+          <h2 class="hover:text-blue-500">Mapa del sitio</h2>
+          <h2 class="hover:text-blue-500">Iniciar sesión o registrarse</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700">
+        <h2 class="text-xl font-bold">Atencion a cliente</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mujer (15)</h2>
+          <h2 class="hover:text-blue-500">Accesorios (16)</h2>
+          <h2 class="hover:text-blue-500">Arte (3)</h2>
+          <h2 class="hover:text-blue-500">Ropa (9)</h2>
+          <h2 class="hover:text-blue-500">Camisas (1)</h2>
+          <h2 class="hover:text-blue-500">Hombre (11)</h2>
+          <h2 class="hover:text-blue-500">Vestidos (9)</h2>
+          <h2 class="hover:text-blue-500">Digital (5)</h2>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<style>
+  .hover-scale {
+    transition: transform 300ms ease-in-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fall {
+    animation-name: fall;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .hover-scale {
+    transition: transform 1s ease;
+  }
+</style>
+
+<script>
+  document.getElementById("cambiarDiv").addEventListener("click", function () {
+    document.getElementById("div1").classList.toggle("hidden");
+    document.getElementById("div2").classList.toggle("hidden");
+  });
+
+  document.getElementById("cambiarDiv2").addEventListener("click", function () {
+    document.getElementById("div2").classList.toggle("hidden");
+    document.getElementById("div1").classList.toggle("hidden");
+  });
+
+  function cambiarImagenCamara(hover) {
+    const imagen = document.getElementById("imagenCamara");
+    if (hover) {
+      imagen.src = "source/camara1.jpg";
+    } else {
+      imagen.src = "source/camara2.jpg";
+    }
+  }
+
+  function cambiarImagenBocina(hover) {
+    const imagen = document.getElementById("imagenBocina");
+    if (hover) {
+      imagen.src = "source/bocina1.jpg";
+    } else {
+      imagen.src = "source/bocina2.jpg";
+    }
+  }
+
+  function cambiarImagenAudifonos(hover) {
+    const imagen = document.getElementById("imagenAudifonos");
+    if (hover) {
+      imagen.src = "source/audifonos22.jpg";
+    } else {
+      imagen.src = "source/audifonos11.jpg";
+    }
+  }
+
+  function cambiarImagenHub(hover) {
+    const imagen = document.getElementById("imagenHub");
+    if (hover) {
+      imagen.src = "source/hub1.jpg";
+    } else {
+      imagen.src = "source/hub2.jpg";
+    }
+  }
+
+  var carro = document.getElementById("carritodecompras");
+
+  carro.addEventListener("click", function () {
+    window.location.href = "GoMarketMiCarrito.html"; // Reemplaza esta URL con la página a la que quieres redirigir
+  });
+</script>
