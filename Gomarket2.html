@@ -13,8 +13,8 @@
     <title>GOMarket2</title>
   </head>
   <body>
-    <div class="flex justify-between px-12 pt-20 pb-2 z-2 ">
-      <img src="source/gomarket.png" alt="gomarketico" class="h-12" id="back"/>
+    <div class="flex justify-between px-12 pt-20 pb-2 z-2">
+      <img src="source/gomarket.png" alt="gomarketico" class="h-12" id="back" />
       <form class="flex" action="#" method="get">
         <input
           type="text"
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <nav class="fixed top-0 w-full bg-zinc-200">
+    <nav class="fixed top-0 w-full bg-zinc-200 z-50">
       <div class="flex items-center font-semibold justify-between mx-12">
         <div class="flex h-12">
           <div
@@ -70,7 +70,7 @@
         </div>
         <div class="flex gap-6 pr-20">
           <iconify-icon
-          id="admin"
+            onclick="aIniciarSesion()"
             icon="mdi:account-outline"
             width="30"
             class="hover:text-blue-700"
@@ -81,7 +81,7 @@
             class="hover:text-blue-700"
           ></iconify-icon>
           <iconify-icon
-            id="carritodecompras"
+            onclick="aCarrito()"
             icon="material-symbols:shopping-cart-outline"
             width="30"
             class="hover:text-blue-700 animate-bounce"
@@ -115,7 +115,7 @@
           <img
             src="source/audifonos2.jpg"
             alt=""
-            class="transition-transform duration-700  hover:scale-110"
+            class="transition-transform duration-700 hover:scale-110"
           />
         </div>
         <div
@@ -325,9 +325,158 @@
       </div>
     </div>
 
-    <div class="flex justify-center items-center text-4xl bg-yellow-400 my-20">
-      aqui va el componente de marcos
+    <!--               --------------------------------------                             -->
+
+    <div class="flex -zinc-500 items-center text-center mx-10 h-full">
+      <div
+        class="flex flex-col text-gray-500 items-center font-[verdana] text-sm text-center cursor-pointer h-full"
+      >
+        <p class="text-xl font-semibold text-zinc-900">SmarthPhones</p>
+        <p class="text-xl font-semibold text-zinc-900">& Accessories</p>
+        <h4 class="hover:text-blue-500 text-bg-zinc-300">
+          Computers & Accesories
+        </h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Desktops & Accessories</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Pen Drives & Hard Devices</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">CMemory Cards</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Printiers & Ink</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Internet Devices</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Computers Accesories</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Software</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Ofdice & Stationery</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">All Ofice Stationary</h4>
+        <div class="w-48"></div>
+        <h4 class="hover:text-blue-500">Pensd</h4>
+        <div class="w-48"></div>
+      </div>
+
+      <div class="flex flex-col col bg-zinc-200 items-center text-sm">
+        <img class="device-width" src="source/a.jpg" alt="" />
+        <h3 class="text-blue-500">Free Shipping On All Orders</h3>
+        <h1 class="text-xl font-bold text-zinc-900">Up to 70% Sale</h1>
+        <h1 class="text-xl font-bold text-zinc-900">Enjoy This Summer</h1>
+        <button
+          class="bg-yellow-400 rounded-md h-12 w-48 font-[verdana] hover:-translate-y-1 hover:scale-70 hover:bg-indigo-500 duration-300"
+        >
+          ShopCollection ->
+        </button>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex gap-6 p-5 items-center">
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-25" src="source/xbox.jpg" alt="" />
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Xbox One
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Ultimate Edition
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Gears Of wars
+            </h3>
+            <div class="text-red-500">$599.00</div>
+            <div class="text-zinc-500 font line-through">$799.00</div>
+          </div>
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-25" src="source/controlSwitch.jpeg" alt="" />
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Control
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Ultimate Edition
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Dragon Ball
+            </h3>
+            <div class="text-red-500">$5999.00</div>
+            <div class="text-zinc-500 font line-through">$8299.00</div>
+          </div>
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-25" " " src="source/headphone2.jpg" alt="">
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Web Cam
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Limitaded
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Nigth Cam
+            </h3>
+            <div class="text-red-500">$899.00</div>
+            <div class="text-zinc-500 font line-through">$5000.00</div>
+          </div>
+        </div>
+
+        <!-- CONTENEDOR DE LOS 3 CARDS -->
+
+        <div class="flex gap-6 p-5 items-center">
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-40" src="source/headshot.jpeg" alt="" />
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Dolce & Gabbana, Lacoste
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Bakkey Pure Color
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Transparent watch
+            </h3>
+            <h6 class="text-sm font-bold text-zinc-900">$10.00</h6>
+          </div>
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-40" src="source/jblbocina.jpg" alt="" />
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Dolce & Gabbana, Lacoste
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Bakkey Pure Color
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Transparent watch
+            </h3>
+            <h6 class="text-sm font-bold text-zinc-900">$10.00</h6>
+          </div>
+          <div
+            class="flex flex-col bg-zinc-100 items-center hover:scale-105 transition-transform duration-700"
+          >
+            <img class="w-60 h-40" src="source/n.jpg" alt="" />
+            <h3 class="text-gray-400 hover:text-blue-500 cursor-pointer">
+              Dolce & Gabbana, Lacoste
+            </h3>
+            <h3 class="text-zinc-900 hover:text-blue-500 cursor-pointer">
+              Bakkey Pure Color
+            </h3>
+            <h3 class="text-g-400 hover:text-blue-500 cursor-pointer">
+              Transparent watch
+            </h3>
+            <h6 class="text-sm font-bold text-zinc-900">$10.00</h6>
+          </div>
+        </div>
+      </div>
+
+            
     </div>
+
+    <!--               --------------------------------------                             -->
 
     <div
       class="flex flex-col justify-center items-center font-[Verdana] bg-zinc-100 px-6"
@@ -639,18 +788,12 @@
     }
   }
 
-  var carro = document.getElementById("carritodecompras");
-  carro.addEventListener("click", function () {
-    window.location.href = "GoMarketMiCarrito.html"; 
-  });
+  function aIniciarSesion() {
+    window.location.href = "GoM-IniciarSesion.html";
+  }
 
-  var admin = document.getElementById("admin");
-  admin.addEventListener("click", function () {
-    window.location.href = "GoM-Admin.html"; 
-  });
+  function aCarrito() {
+    window.location.href = "GoMarketMiCarrito.html";
+  }
 
-  var back = document.getElementById("flechatras");
-  back.addEventListener("click", function () {
-    window.location.href = "Gomarket2.html"; 
-  });
 </script>

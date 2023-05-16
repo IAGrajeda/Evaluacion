@@ -18,7 +18,7 @@
         src="source/gomarket.png"
         alt="gomarketico"
         class="h-12"
-        id="flechatras"
+        onclick="aInicio()"
       />
       <form class="flex" action="#" method="get">
         <input
@@ -43,22 +43,23 @@
       </div>
     </div>
 
-    <nav class="fixed top-0 w-full bg-zinc-200">
+    <nav class="fixed top-0 w-full bg-zinc-200 ">
       <div class="flex items-center font-semibold justify-between mx-12">
         <div class="flex h-12">
-          <div
+          <a
             class="flex bg-[#fed700] h-full items-center gap-6 px-6 transition-all duration-700 hover:bg-yellow-500 font-bold"
           >
             <i class="fa-solid fa-bars fa-lg"></i>
             Departamentos
-          </div>
-          <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+        </a>
+          <a
+            class="md:flex  gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-700 hidden "
+            href="#"
           >
             Compras
-          </div>
+      </a>
           <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-700"
           >
             Pagina
           </div>
@@ -75,7 +76,7 @@
         </div>
         <div class="flex gap-6 pr-20">
           <iconify-icon
-            id="admin"
+            onclick="aIniciarSesion()"
             icon="mdi:account-outline"
             width="30"
             class="hover:text-blue-700"
@@ -86,13 +87,12 @@
             class="hover:text-blue-700"
           ></iconify-icon>
           <iconify-icon
-            id="carritodecompras"
             icon="material-symbols:shopping-cart-outline"
             width="30"
-            class="hover:text-blue-700"
+            class="hover:text-blue-700 text-red-500"
           ></iconify-icon>
           <iconify-icon
-            id="flechatras"
+            onclick="aInicio()"
             icon="material-symbols:arrow-back"
             width="30"
             class="hover:text-blue-700 animate-bounce text-red-500"
@@ -197,14 +197,16 @@
       </div>
     </div>
 
-    <div class="flex flex-col py-12 pr-20 font-semibold text-xl text-zinc-700 border-2">
+    <div
+      class="flex flex-col py-12 pr-20 font-semibold text-xl text-zinc-700 border-2"
+    >
       <h2 class="flex justify-end">Subtotal: $5,000,000.00</h2>
       <h2 class="flex justify-end">Menos impuestos: -$4,999,995</h2>
       <h2 class="flex justify-end">Total: $5.00</h2>
     </div>
 
     <div
-      class="flex  border-2 border-red-400 w-full justify-center items-center font-[Verdana] text-zinc-700 w-[50%] font-semibold bg-yellow-400 rounded-md h-10  "
+      class="flex border-2 border-red-400 w-full justify-center items-center font-[Verdana] text-zinc-700 w-[50%] font-semibold bg-yellow-400 rounded-md h-10"
     >
       <button id="Comprar">Comprar</button>
     </div>
@@ -328,13 +330,11 @@
 </html>
 
 <script>
-  var back = document.getElementById("flechatras");
-  back.addEventListener("click", function () {
-    window.location.href = "Gomarket2.html";
-  });
+  function aIniciarSesion() {
+    window.location.href = "GoM-IniciarSesion.html";
+  }
 
-  var admin = document.getElementById("admin");
-  admin.addEventListener("click", function () {
-    window.location.href = "GoM-Admin.html";
-  });
+  function aInicio() {
+    window.location.href = "Gomarket2.html";
+  }
 </script>
