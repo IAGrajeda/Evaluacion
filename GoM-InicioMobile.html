@@ -29,43 +29,43 @@
             Departamentos
           </div>
           <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200 cursor-pointer hover:text-blue-500"
           >
             Compras
           </div>
           <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200 cursor-pointer hover:text-blue-500"
           >
             Pagina
           </div>
           <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200 cursor-pointer hover:text-blue-500"
           >
             Blog
           </div>
           <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200 cursor-pointer hover:text-blue-500"
           >
             Contactanos
           </div>
         </div>
-        <div class="flex gap-6 pl-96">
+        <div class="flex gap-6 pl-96 ">
           <iconify-icon
             onclick="aIniciarSesion()"
             icon="mdi:account-outline"
             width="30"
-            class="hover:text-blue-700"
+            class="hover:text-blue-700 cursor-pointer"
           ></iconify-icon>
           <iconify-icon
             icon="mdi:cards-heart-outline"
             width="30"
-            class="hover:text-blue-700"
+            class="hover:text-blue-700 cursor-pointer"
           ></iconify-icon>
           <iconify-icon
             onclick="aCarrito()"
             icon="material-symbols:shopping-cart-outline"
             width="30"
-            class="hover:text-blue-700 animate-bounce"
+            class="hover:text-blue-700 cursor-pointer animate-bounce"
           ></iconify-icon>
         </div>
       </div>
@@ -104,7 +104,7 @@
           class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3 hover:border-yellow-400 focus:border-yellow-400 focus:outline-none"
         />
         <div
-          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700"
+          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700 cursor-pointer"
         >
           Buscar
         </div>
@@ -112,7 +112,7 @@
       <div class="flex justify-center items-center gap-3">
         <i class="fa-solid fa-phone fa-2xl"></i>
         <div
-          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white"
+          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white cursor-"
         >
           Llama Ahora!
           <div class="font-normal">+52 445-155-5152</div>
@@ -127,23 +127,21 @@
       <button id="close-btn" class="p-2 bg-gray-500 w-full text-white mt-20">
         Cerrar menú
       </button>
-      <div class="flex flex-col m-6 text-white font-semibold cursor-pointer">
+      <div class="flex flex-col m-6 text-white font-semibold">
         <div
-          onclick="aInicio()"
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
         >
           <iconify-icon icon="material-symbols:home" width="30"></iconify-icon>
-          <h2 class="cursor-pointer">Inicio</h2>
+          <h2>Inicio</h2>
         </div>
         <div
-          onclick="aCarrito()"
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
         >
           <iconify-icon
             icon="material-symbols:shopping-basket-outline"
             width="30"
           ></iconify-icon>
-          <h2 class="cursor-pointer">Carrito</h2>
+          <h2>Tienda</h2>
         </div>
         <div
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
@@ -152,7 +150,7 @@
             icon="mdi:book-open-page-variant-outline"
             width="30"
           ></iconify-icon>
-          <h2 class="cursor-pointer">Pagina</h2>
+          <h2>Pagina</h2>
         </div>
         <div
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
@@ -161,14 +159,13 @@
             icon="material-symbols:favorite-outline"
             width="30"
           ></iconify-icon>
-          <h2 class="cursor-pointer">Favoritos</h2>
+          <h2>Favoritos</h2>
         </div>
         <div
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-          onclick="aIniciarSesion()"
         >
-          <iconify-icon icon="mdi:account-outline" width="30"></iconify-icon>
-          <h2 class="cursor-pointer">Iniciar Sesion</h2>
+          <iconify-icon icon="mdi:account-outline" width="30" onclick="aIniciarSesion()"></iconify-icon>
+          <h2>Iniciar Sesion</h2>
         </div>
 
         <div class="p-2 mt-16 flex font-semibold items-center gap-2">
@@ -229,31 +226,31 @@
           <img
             src="source/audifonos2.jpg"
             alt="Audifonos"
-            class="h-[400px] md:h-[600px]"
+            class="h-[300px] md:h-[600px] transition-transform duration-700 hover:scale-110 "
           />
         </div>
 
         <div
-          class="absolute top-[120px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2 sm:left-[80px] md:text-2xl md:left-[200px] md:w-96 md:top-[200px]"
+          class="absolute top-[120px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2  sm:left-[80px] md:text-2xl md:left-[200px] md:w-96 md:top-[200px]"
         >
           <h2
-            class="text-blue-500 flex justify-center font-semibold text-center"
+            class="text-blue-500 flex justify-center font-semibold text-center animate-fall"
           >
             Solo por tiempo limitado
           </h2>
           <h2
-            class="text-zinc-900 flex justify-center text-center font-semibold"
+            class="text-zinc-900 flex justify-center text-center font-semibold animate-fall"
           >
             Audifonos Logitech Nose520 Inalambricos
           </h2>
-          <button class="bg-yellow-400 rounded-sm h-12 mt-10">
+          <button class="bg-yellow-400 rounded-sm h-12 mt-10 transition-all duration-500 hover:bg-zinc-500 hover:text-white ">
             Comprar ahora!
           </button>
         </div>
         <iconify-icon
           id="cambiarDiv"
           icon="material-symbols:arrow-back-ios-new"
-          width="30"
+          width="20"
           flip="horizontal"
           class="hover:bg-zinc-400 flex justify-end items-center"
         ></iconify-icon>
@@ -276,15 +273,15 @@
         </div>
 
         <div
-          class="absolute top-[120px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2 sm:left-[80px] md:text-2xl md:left-[200px] md:w-96 md:top-[200px]"
+          class="absolute top-[120px] left-[120px] font-[verdana] rounded-3xl w-60 flex flex-col gap-2 sm:left-[80px] md:text-2xl md:left-[200px] md:w-96 md:top-[200px] animate-fall"
         >
           <h2
-            class="text-blue-500 flex justify-center font-semibold text-center"
+            class="text-blue-500 flex justify-center font-semibold text-center animate-fall"
           >
             Solo por tiempo limitado
           </h2>
           <h2
-            class="text-zinc-900 flex justify-center text-center font-semibold"
+            class="text-zinc-900 flex justify-center text-center font-semibold animate-fall"
           >
             Sony Playstation VR2 Cuh-ZVR2
           </h2>
@@ -296,23 +293,22 @@
           id="cambiarDiv"
           icon="material-symbols:arrow-back-ios-new"
           width="30"
-          flip="horizontal"
-          class="hover:bg-zinc-400 flex justify-end items-center"
+          class="hover:bg-zinc-400 flex justify-end items-end"
         ></iconify-icon>
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row justify-center p-6">
+    <div class="flex flex-col md:flex-row justify-center p-6 ">
       <div class="flex flex-col md:w-[50%]">
-        <div class="flex bg-zinc-200 m-6">
+        <div class="flex bg-zinc-200 m-6 hover:scale-105 transition-transform duration-700">
           <div
-            class="font-[Verdana] flex justify-center items-center flex-col top-20 left-52 w-60 text-md text-center pl-6 sm:pl-20 md:pl-0"
+            class="font-[Verdana] flex justify-center items-center flex-col top-20 left-52 w-60 text-md text-center pl-6 sm:pl-20 md:pl-0 "
           >
             <h2 class="text-blue-500 flex justify-center">Recien llegados</h2>
             <h2 class="text-zinc-700 flex font-semibold">
               Hasta 40$ de descuento
             </h2>
-            <button class="bg-yellow-400 rounded-sm h-10 w-36 mt-10">
+            <button class="hover:bg-zinc-400 bg-yellow-400 rounded-sm h-10 w-36 mt-10">
               Comprar ahora!
             </button>
           </div>
@@ -322,10 +318,9 @@
             class="w-60 sm:pl-14 md:pl-0"
           />
         </div>
-
         <div class="flex md:flex-row">
           <div class="mx-6 md:m-0 md:flex">
-            <div class="flex bg-zinc-200 sm:m-3">
+            <div class="flex bg-zinc-200 sm:m-3 hover:scale-105 transition-transform duration-700">
               <div class="flex flex-col justify-center items-center">
                 <h2
                   class="text-zinc-700 text-lg font-bold flex justify-center text-center pl-6"
@@ -338,7 +333,7 @@
               </div>
               <img src="source/drone.png" alt="droneimg" class="w-[50%]" />
             </div>
-            <div class="flex bg-zinc-200 sm:m-3">
+            <div class="flex bg-zinc-200 sm:m-3 hover:scale-105 transition-transform duration-700">
               <div class="flex flex-col justify-center items-center">
                 <h2
                   class="text-zinc-700 text-lg font-bold flex justify-center text-center pl-6"
@@ -355,30 +350,34 @@
         </div>
       </div>
 
-      <div class="flex flex-col mx-6 md:w-[30%]">
-        <div class="flex bg-zinc-200">
+      <div class="flex flex-col mx-6 md:w-[30%] hover:scale-105 transition-transform duration-700">
+        <div class="flex bg-zinc-200 ">
           <div class="flex flex-col justify-center items-center">
             <h2
               class="text-zinc-700 text-lg font-bold flex justify-center text-center pl-6 sm:text-2xl"
             >
-              Ventas de liquidación Hasta 45% de descuento
+              Ventas liquidación Hasta 45% de descuento
             </h2>
             <h2 class="text-blue-500 flex justify-center text-center">
               Ver mas...
             </h2>
           </div>
-          <img
+          <img 
             src="source/watch4.png"
             alt="droneimg"
             class="w-[50%] sm:w-60 sm:p-8"
           />
         </div>
-        <div class="pt-6 flex flex-col justify-center items-center bg-zinc-200">
+        <div class="pt-6 flex flex-col justify-center items-center bg-zinc-200 ">
           <div class="flex flex-col justify-center items-center">
             <h2
               class="text-zinc-700 w-60 text-lg font-bold flex justify-center text-center sm:text-2xl sm:w-[400px]"
             >
-              Ventas de liquidación Hasta 99% de descuento
+              Ventas liquidación 
+            </h2> <h2
+              class="text-zinc-700 w-60 text-lg font-bold flex justify-center text-center sm:text-2xl sm:w-[400px]"
+            >
+              Hasta 99% de descuento
             </h2>
             <h2 class="text-blue-500 flex justify-center text-center">
               Ver mas...
@@ -400,10 +399,19 @@
         <h2 class="hover:text-blue-500">Productos en Tendencia</h2>
       </div>
       <div
-        class="flex justify-evenly flex-wrap gap-32 md:gap-32 items-baseline"
+        class="flex justify-evenly flex-wrap gap-32 md:gap-32 items-baseline  "
+       
       >
-        <div class="flex flex-col h-60 w-44">
-          <img src="source/camara1.jpg" alt="camara1" class="" />
+        <div class="flex flex-col h-60 w-44 "
+        onmouseover="cambiarImagenCamara(false)"
+        onmouseout="cambiarImagenCamara(true)"
+        >
+        <img
+        id="imagenCamara"
+        src="source/camara1.jpg"
+        alt=""
+        class=""
+      />
           <h2 class="text-center">
             TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior
           </h2>
@@ -411,17 +419,35 @@
             <div class="text-red-500 font-semibold">$599.00</div>
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
+          
         </div>
-        <div class="flex flex-col h-60 w-44">
-          <img src="source/bocina1.jpg" alt="camara1" class="" />
+        <div
+         class="flex flex-col  h-60 w-44"
+          onmouseover="cambiarImagenBocina(false)"
+          onmouseout="cambiarImagenBocina(true)"
+          >
+          <img
+          id="imagenBocina"
+          src="source/bocina1.jpg"
+           alt="camara1" 
+           class="hover-scale" 
+           />
           <h2 class="text-center">JBL Bocina Portátil GO 2 Bluetooth - Gris</h2>
           <div class="flex justify-center items-center gap-3">
             <div class="text-red-500 font-semibold">$800.00</div>
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
-          <img src="source/audifonos11.jpg" alt="camara1" class="" />
+        <div class="flex flex-col h-40 w-44 "
+        onmouseover="cambiarImagenAudifonos(false)"
+        onmouseout="cambiarImagenAudifonos(true)"
+        >
+        <img
+        id="imagenAudifonos"
+        src="source/audifonos22.jpg"
+        alt=""
+        class="h-60 hover-scale"
+      />
           <h2 class="text-center">
             Sony EX14AP Audífonos con micrófono In-Ear manos libres
           </h2>
@@ -430,8 +456,16 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
-          <img src="source/hub1.jpg" alt="camara1" class="" />
+        <div class="flex flex-col h-60 w-44"
+        onmouseover="cambiarImagenHub(false)"
+          onmouseout="cambiarImagenHub(true)"
+        >
+        <img
+        id="imagenHub"
+        src="source/hub1.jpg"
+        alt=""
+        class="h-60 hover-scale"
+      />
           <h2 class="text-center">
             Lostrain Hub USB C 3.0, 7 en 2 Adaptador multipuerto Tipo C
           </h2>
@@ -446,7 +480,7 @@
     <div
       class="flex flex-col font-[verdana] mx-6 sm:pt-20 md:flex-row border-2 md:text-sm"
     >
-      <div class="flex flex-col md:w-[20%] md:m-9">
+      <div class="flex flex-col md:w-[20%] md:m-9 ">
         <p class="text-2xl font-semibold text-zinc-700 md:text-lg">
           Smarphones y Accesorios
         </p>
@@ -486,14 +520,14 @@
       </div>
 
       <div
-        class="flex flex-col bg-zinc-100 items-center m-6 text-center md:w-[50%]"
+        class="flex flex-col bg-zinc-100 items-center m-6 text-center md:w-[50%]  hover:scale-105 transition-transform duration-700"
       >
         <img class="h-[400px]" src="source/phone.png" alt="phone" />
         <h3 class="text-blue-500">Envio gratis en todos tus pedidos</h3>
         <h2 class="text-xl font-bold text-zinc-900">Rebajas de hasta el 70%</h2>
         <h2 class="text-xl font-bold text-zinc-900">Disfruta el verano</h2>
         <button
-          class="bg-yellow-400 rounded-md h-12 w-48 font-[verdana] hover:-translate-y-1 hover:scale-70 hover:bg-indigo-500 duration-300"
+          class="bg-yellow-400 rounded-md h-12 w-48 font-[verdana] hover:-translate-y-1 hover:scale-70 hover:bg-indigo-500 duration-300 hover:-translate-y-1 hover:scale-70 hover:bg-indigo-500 duration-300"
         >
           Comprar coleccion ->
         </button>
@@ -501,7 +535,7 @@
       <div
         class="flex justify-evenly flex-wrap gap-32 md:border-blue-500 md:gap-6 items-baseline"
       >
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/camara1.jpg" alt="camara1" class="" />
           <h2 class="text-center">
             TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior
@@ -511,7 +545,7 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/bocina1.jpg" alt="camara1" class="" />
           <h2 class="text-center">JBL Bocina Portátil GO 2 Bluetooth - Gris</h2>
           <div class="flex justify-center items-center gap-3">
@@ -519,7 +553,7 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/audifonos11.jpg" alt="camara1" class="" />
           <h2 class="text-center">
             Sony EX14AP Audífonos con micrófono In-Ear manos libres
@@ -529,7 +563,7 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/hub1.jpg" alt="camara1" class="" />
           <h2 class="text-center">
             Lostrain Hub USB C 3.0, 7 en 2 Adaptador multipuerto Tipo C
@@ -539,7 +573,7 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/bocina1.jpg" alt="camara1" class="" />
           <h2 class="text-center">JBL Bocina Portátil GO 2 Bluetooth - Gris</h2>
           <div class="flex justify-center items-center gap-3">
@@ -547,7 +581,7 @@
             <div class="text-zinc-500 line-through">$799.00</div>
           </div>
         </div>
-        <div class="flex flex-col h-60 w-44">
+        <div class="flex flex-col h-60 w-44 hover:scale-105 transition-transform duration-700">
           <img src="source/audifonos11.jpg" alt="camara1" class="" />
           <h2 class="text-center">
             Sony EX14AP Audífonos con micrófono In-Ear manos libres
@@ -564,14 +598,14 @@
       <h2 class="text-2xl pt-6 text-zinc-700 font-[verdana]">Tips y blogs</h2>
       <div class="flex flex-col gap-6 md:flex-row md:items-baseline">
         <div
-          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center"
+          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center hover:scale-105 transition-transform duration-700"
         >
           <img
             src="source/finmundo.jpg"
             alt=""
             class="flex w-full h-60 sm:w-[70%] md:w-full"
           />
-          <div class="sm:flex sm:flex-col w-full">
+          <div class="sm:flex sm:flex-col w-full ">
             <h2 class="font-semibold font-[verdana]">
               Se acerca el fin del mundo
             </h2>
@@ -594,7 +628,7 @@
           </div>
         </div>
         <div
-          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center"
+          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center hover:scale-105 transition-transform duration-700"
         >
           <img
             src="source/atrabajar.jpg"
@@ -623,7 +657,7 @@
           </div>
         </div>
         <div
-          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center"
+          class="text-zinc-700 sm:flex sm:flex-col sm:items-center sm:justify-center hover:scale-105 transition-transform duration-700"
         >
           <img
             src="source/interior.jpg"
@@ -638,7 +672,7 @@
               <div
                 class="bg-blue-500 font-semibold rounded-md text-sm p-1 text-white"
               >
-                Viesnes, 26 2023
+                Agosto, 26 2023
               </div>
               <h2>Posteado por: Walter White</h2>
             </div>
@@ -703,7 +737,7 @@
           class="border-2 border-zinc-500 rounded-l-sm h-10 px-3 focus:outline-none sm:w-full"
         />
         <div
-          class="bg-zinc-700 w-[100px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-10 hover:bg-blue-400"
+          class="bg-zinc-700 w-[100px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-10 hover:bg-blue-400 cursor-pointer"
         >
           Suscribirse
         </div>
@@ -771,7 +805,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col text-zinc-700 w-full">
+      <div class="flex flex-col text-zinc-700 w-full  cursor-pointer">
         <h2 class="text-xl font-bold">Informacion de la Empresa</h2>
         <div class="pl-6">
           <h2 class="hover:text-blue-500">Mi cuenta</h2>
@@ -784,7 +818,7 @@
           <h2 class="hover:text-blue-500">Contacte con nosotros</h2>
         </div>
       </div>
-      <div class="flex flex-col text-zinc-700 w-full">
+      <div class="flex flex-col text-zinc-700 w-full  cursor-pointer">
         <h2 class="text-xl font-bold">Mas de nosotros</h2>
         <div class="pl-6">
           <h2 class="hover:text-blue-500">Acerca de GoMarket</h2>
@@ -797,7 +831,7 @@
           <h2 class="hover:text-blue-500">Iniciar sesión o registrarse</h2>
         </div>
       </div>
-      <div class="flex flex-col text-zinc-700 w-full">
+      <div class="flex flex-col text-zinc-700 w-full  cursor-pointer">
         <h2 class="text-xl font-bold">Atencion al cliente</h2>
         <div class="pl-6">
           <h2 class="hover:text-blue-500">Mujer (15)</h2>
@@ -817,6 +851,7 @@
 <script>
   const menuBtn = document.getElementById("menu-btn");
   const menuBtn2 = document.getElementById("menu-btn2");
+  
   const menu = document.getElementById("menu");
 
   menuBtn.addEventListener("click", () => {
@@ -826,7 +861,6 @@
   menuBtn2.addEventListener("click", () => {
     menu.classList.toggle("-translate-x-full");
   });
-
   const closeBtn = document.getElementById("close-btn");
   const menucerrar = document.getElementById("menu");
 
@@ -845,11 +879,50 @@
     document.getElementById("div1").classList.toggle("hidden");
   });
 
+/ANIMACION PARA CAMBIAR DE IMAGEN CUANDO PASO EL NCHE CURSR/
+
+function cambiarImagenCamara(hover) {
+    const imagen = document.getElementById("imagenCamara");
+    if (hover) {
+      imagen.src = "source/camara1.jpg";
+    } else {
+      imagen.src = "source/camara2.jpg";
+    }
+  }
+
+  function cambiarImagenBocina(hover) {
+    const imagen = document.getElementById("imagenBocina");
+    if (hover) {
+      imagen.src = "source/bocina1.jpg";
+    } else {
+      imagen.src = "source/bocina2.jpg";
+    }
+  }
+
+  function cambiarImagenAudifonos(hover) {
+    const imagen = document.getElementById("imagenAudifonos");
+    if (hover) {
+      imagen.src = "source/audifonos22.jpg";
+    } else {
+      imagen.src = "source/audifonos11.jpg";
+    }
+  }
+
+  function cambiarImagenHub(hover) {
+    const imagen = document.getElementById("imagenHub");
+    if (hover) {
+      imagen.src = "source/hub1.jpg";
+    } else {
+      imagen.src = "source/hub2.jpg";
+    }
+  }
+
+
   function aIniciarSesion() {
     window.location.href = "GoM-Sesion.html";
   }
 
   function aCarrito() {
     window.location.href = "GoM-Carrito.html";
-  }
+  }
 </script>

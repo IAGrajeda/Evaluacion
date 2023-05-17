@@ -13,208 +13,214 @@
     <title>Document</title>
 </head>
 <body>
-    <nav
-      class="hidden fixed top-0 w-full bg-zinc-200 z-50 sm:hidden md:block md:flex md:fixed"
-    >
-      <div class="flex items-center font-semibold mx-12">
-        <div class="flex h-12">
-          <div
-            id="menu-btn"
-            class="flex bg-[#fed700] h-full items-center gap-6 px-6 transition-all duration-700 hover:bg-yellow-500 font-bold"
-          >
-            <iconify-icon
-              icon="material-symbols:menu"
-              width="30"
-            ></iconify-icon>
-            Departamentos
-          </div>
-          <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
-          >
-            Compras
-          </div>
-          <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
-          >
-            Pagina
-          </div>
-          <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
-          >
-            Blog
-          </div>
-          <div
-            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
-          >
-            Contactanos
-          </div>
-        </div>
-        <div class="flex gap-6 pl-96">
-          <iconify-icon
-            onclick="aIniciarSesion()"
-            icon="mdi:account-outline"
-            width="30"
-            class="hover:text-blue-700"
-          ></iconify-icon>
-          <iconify-icon
-            icon="mdi:cards-heart-outline"
-            width="30"
-            class="hover:text-blue-700"
-          ></iconify-icon>
-          <iconify-icon
-            onclick="aCarrito()"
-            icon="material-symbols:shopping-cart-outline"
-            width="30"
-            class="hover:text-blue-700 animate-bounce"
-          ></iconify-icon>
-        </div>
+  <nav
+  class="hidden fixed top-0 w-full bg-zinc-200 z-50 sm:hidden md:block md:flex md:fixed"
+>
+  <div class="flex items-center font-semibold mx-12">
+    <div class="flex h-12">
+      <div
+        id="menu-btn"
+        class="flex bg-[#fed700] h-full items-center gap-6 px-6 transition-all duration-700 hover:bg-yellow-500 font-bold"
+      >
+        <iconify-icon
+          icon="material-symbols:menu"
+          width="30"
+        ></iconify-icon>
+        Departamentos
       </div>
-    </nav>
-
-    <div class="flex justify-between items-center mx-6 py-2 md:hidden">
+      <div
+        class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+        onclick="aInicio()"
+      >
+        Compras
+      </div>
+      <div
+        class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+      >
+        Pagina
+      </div>
+      <div
+        class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+      >
+        Blog
+      </div>
+      <div
+        class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+      >
+        Contactanos
+      </div>
+    </div>
+    <div class="flex gap-6 pl-96">
       <iconify-icon
-        icon="material-symbols:menu"
+        onclick="aMisProductos()"
+        icon="material-symbols:sell-outline"
         width="30"
-        id="menu-btn2"
+        class="hover:text-blue-700"
       ></iconify-icon>
-      <img src="source/gomarket2.png" alt="gomarketico" class="h-14" onclick="aInicio()" />
-      <div>
-        <iconify-icon
-          icon="material-symbols:search"
-          width="30"
-          id="search"
-        ></iconify-icon>
-        <iconify-icon
-          class="animate-bounce text-red-500"
-          icon="material-symbols:shopping-cart-outline"
-          width="30"
-          onclick="aCarrito()"
-        ></iconify-icon>
-      </div>
+      <iconify-icon
+        icon="mdi:cards-heart-outline"
+        width="30"
+        class="hover:text-blue-700"
+      ></iconify-icon>
+      <iconify-icon
+        onclick="aCarrito()"
+        icon="material-symbols:shopping-cart-outline"
+        width="30"
+        class="hover:text-blue-700 animate-bounce"
+      ></iconify-icon>
     </div>
+  </div>
+</nav>
 
+<div class="flex justify-between items-center mx-6 py-2 md:hidden">
+  <iconify-icon
+    icon="material-symbols:menu"
+    width="30"
+    id="menu-btn2"
+  ></iconify-icon>
+  <img src="source/gomarket2.png" alt="gomarketico" class="h-14" onclick="aInicio()" />
+  <div>
+    <iconify-icon
+      icon="material-symbols:search"
+      width="30"
+      id="search"
+    ></iconify-icon>
+    <iconify-icon
+      class="animate-bounce text-red-500"
+      icon="material-symbols:shopping-cart-outline"
+      width="30"
+      onclick="aCarrito()"
+    ></iconify-icon>
+  </div>
+</div>
+
+<div
+  class="hidden justify-between px-12 pt-20 pb-2 z-2 sm:hidden md:block md:flex"
+>
+  <img src="source/gomarket.png" alt="gomarketico" class="h-12"  onclick="aInicio()" />
+  <form class="flex" action="#" method="get">
+    <input
+      type="text"
+      placeholder="Buscar productos"
+      class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3 hover:border-yellow-400 focus:border-yellow-400 focus:outline-none"
+    />
     <div
-      class="hidden justify-between px-12 pt-20 pb-2 z-2 sm:hidden md:block md:flex"
+      class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700"
     >
-      <img src="source/gomarket.png" alt="gomarketico" class="h-12" onclick="aInicio()" />
-      <form class="flex" action="#" method="get">
-        <input
-          type="text"
-          placeholder="Buscar productos"
-          class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3 hover:border-yellow-400 focus:border-yellow-400 focus:outline-none"
-        />
-        <div
-          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700"
-        >
-          Buscar
-        </div>
-      </form>
-      <div class="flex justify-center items-center gap-3">
-        <i class="fa-solid fa-phone fa-2xl"></i>
-        <div
-          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white"
-        >
-          Llama Ahora!
-          <div class="font-normal">+52 445-155-5152</div>
-        </div>
-      </div>
+      Buscar
     </div>
-
+  </form>
+  <div class="flex justify-center items-center gap-3">
+    <i class="fa-solid fa-phone fa-2xl"></i>
     <div
-      id="menu"
-      class="fixed z-50 left-0 top-0 h-full w-64 bg-gray-700 transform -translate-x-full transition-transform duration-300 ease-in-out"
+      class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white"
     >
-      <button id="close-btn" class="p-2 bg-gray-500 w-full text-white mt-20">
-        Cerrar menú
-      </button>
-      <div class="flex flex-col m-6 text-white font-semibold cursor-pointer">
-        <div
-          onclick="aInicio()"
-          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-        >
-          <iconify-icon icon="material-symbols:home" width="30"></iconify-icon>
-          <h2 class="cursor-pointer">Inicio</h2>
-        </div>
-        <div
-          onclick="aCarrito()"
-          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-        >
-          <iconify-icon
-            icon="material-symbols:shopping-basket-outline"
-            width="30"
-          ></iconify-icon>
-          <h2 class="cursor-pointer">Carrito</h2>
-        </div>
-        <div
-          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-        >
-          <iconify-icon
-            icon="mdi:book-open-page-variant-outline"
-            width="30"
-          ></iconify-icon>
-          <h2 class="cursor-pointer">Pagina</h2>
-        </div>
-        <div
-          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-        >
-          <iconify-icon
-            icon="material-symbols:favorite-outline"
-            width="30"
-          ></iconify-icon>
-          <h2 class="cursor-pointer">Favoritos</h2>
-        </div>
-        <div
-          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-          onclick="aIniciarSesion()"
-        >
-          <iconify-icon icon="mdi:account-outline" width="30"></iconify-icon>
-          <h2 class="cursor-pointer">Iniciar Sesion</h2>
-        </div>
+      Llama Ahora!
+      <div class="font-normal">+52 445-155-5152</div>
+    </div>
+  </div>
+</div>
 
-        <div class="p-2 mt-16 flex font-semibold items-center gap-2">
-          <div class="flex items-center">
-            <iconify-icon
-              icon="material-symbols:phone-enabled-sharp"
-              width="30"
-              flip="horizontal"
-            ></iconify-icon>
-            <h2>Contacto</h2>
-          </div>
-        </div>
-        <div
-          class="flex flex-col justify-start text-sm items-center font-normal"
-        >
-          <div class="flex items-center">
-            <iconify-icon
-              icon="material-symbols:phone-android-outline"
-              width="30"
-              class=""
-            ></iconify-icon>
-            <h2>Telefono: +52 445-155-5152</h2>
-          </div>
-        </div>
-        <div class="flex flex-col text-sm items-center font-normal">
-          <div class="flex justify-start items-center">
-            <iconify-icon
-              icon="material-symbols:mail-outline"
-              width="30"
-              class=""
-            ></iconify-icon>
-            <h2>hello@queteimporta.com</h2>
-          </div>
-        </div>
-        <div class="flex flex-col text-sm items-center font-normal">
-          <div class="flex justify-start items-center">
-            <iconify-icon
-              icon="material-symbols:share-location"
-              width="30"
-              class=""
-            ></iconify-icon>
-            <h2>Calle: Midwitch, Silent Hill, EU.</h2>
-          </div>
-        </div>
+<div
+  id="menu"
+  class="fixed z-50 left-0 top-0 h-full w-64 bg-gray-700 transform -translate-x-full transition-transform duration-300 ease-in-out"
+>
+  <button id="close-btn" class="p-2 bg-gray-500 w-full text-white mt-20">
+    Cerrar menú
+  </button>
+  <div class="flex flex-col m-6 text-white font-semibold cursor-pointer">
+    <div
+      onclick="aInicio()"
+      class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+    >
+      <iconify-icon icon="material-symbols:home" width="30"></iconify-icon>
+      <h2 class="cursor-pointer">Inicio</h2>
+    </div>
+    <div
+      onclick="aCarrito()"
+      class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+    >
+      <iconify-icon
+        icon="material-symbols:shopping-basket-outline"
+        width="30"
+      ></iconify-icon>
+      <h2 class="cursor-pointer">Carrito</h2>
+    </div>
+    <div
+      class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+    >
+      <iconify-icon
+        icon="mdi:book-open-page-variant-outline"
+        width="30"
+      ></iconify-icon>
+      <h2 class="cursor-pointer">Pagina</h2>
+    </div>
+    <div
+      class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+    >
+      <iconify-icon
+        icon="material-symbols:favorite-outline"
+        width="30"
+      ></iconify-icon>
+      <h2 class="cursor-pointer">Favoritos</h2>
+    </div>
+    <div
+      class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+      onclick="aIniciarSesion()"
+    >
+      <iconify-icon
+        onclick="aMisProductos()"
+        icon="material-symbols:sell-outline"
+        width="30"
+        class="hover:text-blue-700"
+      ></iconify-icon>
+      <h2 class="cursor-pointer">Mis productos</h2>
+    </div>
+
+    <div class="p-2 mt-16 flex font-semibold items-center gap-2">
+      <div class="flex items-center">
+        <iconify-icon
+          icon="material-symbols:phone-enabled-sharp"
+          width="30"
+          flip="horizontal"
+        ></iconify-icon>
+        <h2>Contacto</h2>
       </div>
     </div>
+    <div
+      class="flex flex-col justify-start text-sm items-center font-normal"
+    >
+      <div class="flex items-center">
+        <iconify-icon
+          icon="material-symbols:phone-android-outline"
+          width="30"
+          class=""
+        ></iconify-icon>
+        <h2>Telefono: +52 445-155-5152</h2>
+      </div>
+    </div>
+    <div class="flex flex-col text-sm items-center font-normal">
+      <div class="flex justify-start items-center">
+        <iconify-icon
+          icon="material-symbols:mail-outline"
+          width="30"
+          class=""
+        ></iconify-icon>
+        <h2>hello@queteimporta.com</h2>
+      </div>
+    </div>
+    <div class="flex flex-col text-sm items-center font-normal">
+      <div class="flex justify-start items-center">
+        <iconify-icon
+          icon="material-symbols:share-location"
+          width="30"
+          class=""
+        ></iconify-icon>
+        <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="text-zinc-700">
         <div class="flex justify-center items-center mt-16 font-[Verdana] font-semibold">

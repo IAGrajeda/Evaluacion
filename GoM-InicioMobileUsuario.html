@@ -13,8 +13,6 @@
     <title>Go-Market</title>
   </head>
   <body>
-    
-    
     <nav
       class="hidden fixed top-0 w-full bg-zinc-200 z-50 sm:hidden md:block md:flex md:fixed"
     >
@@ -32,6 +30,7 @@
           </div>
           <div
             class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+            onclick="aInicio()"
           >
             Compras
           </div>
@@ -79,7 +78,7 @@
         width="30"
         id="menu-btn2"
       ></iconify-icon>
-      <img src="source/gomarket2.png" alt="gomarketico" class="h-14" />
+      <img src="source/gomarket2.png" alt="gomarketico" class="h-14" onclick="aInicio()" />
       <div>
         <iconify-icon
           icon="material-symbols:search"
@@ -98,7 +97,7 @@
     <div
       class="hidden justify-between px-12 pt-20 pb-2 z-2 sm:hidden md:block md:flex"
     >
-      <img src="source/gomarket.png" alt="gomarketico" class="h-12" id="back" />
+      <img src="source/gomarket.png" alt="gomarketico" class="h-12"  onclick="aInicio()" />
       <form class="flex" action="#" method="get">
         <input
           type="text"
@@ -167,10 +166,10 @@
         </div>
         <div
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
-          onclick="aIniciarSesion()"
+          onclick="aMisProductos()"
         >
           <iconify-icon
-            onclick="aMisProductos()"
+            
             icon="material-symbols:sell-outline"
             width="30"
             class="hover:text-blue-700"
@@ -824,6 +823,7 @@
 <script>
   const menuBtn = document.getElementById("menu-btn");
   const menuBtn2 = document.getElementById("menu-btn2");
+  
   const menu = document.getElementById("menu");
 
   menuBtn.addEventListener("click", () => {
