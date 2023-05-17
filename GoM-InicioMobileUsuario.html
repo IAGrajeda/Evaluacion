@@ -13,6 +13,8 @@
     <title>Go-Market</title>
   </head>
   <body>
+    
+    
     <nav
       class="hidden fixed top-0 w-full bg-zinc-200 z-50 sm:hidden md:block md:flex md:fixed"
     >
@@ -51,8 +53,8 @@
         </div>
         <div class="flex gap-6 pl-96">
           <iconify-icon
-            onclick="aIniciarSesion()"
-            icon="mdi:account-outline"
+            onclick="aMisProductos()"
+            icon="material-symbols:sell-outline"
             width="30"
             class="hover:text-blue-700"
           ></iconify-icon>
@@ -167,8 +169,13 @@
           class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
           onclick="aIniciarSesion()"
         >
-          <iconify-icon icon="mdi:account-outline" width="30"></iconify-icon>
-          <h2 class="cursor-pointer">Iniciar Sesion</h2>
+          <iconify-icon
+            onclick="aMisProductos()"
+            icon="material-symbols:sell-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <h2 class="cursor-pointer">Mis productos</h2>
         </div>
 
         <div class="p-2 mt-16 flex font-semibold items-center gap-2">
@@ -834,7 +841,6 @@
     menucerrar.classList.add("-translate-x-full");
   });
 
-
   document.getElementById("cambiarDiv").addEventListener("click", function () {
     document.getElementById("div1").classList.toggle("hidden");
     document.getElementById("div2").classList.toggle("hidden");
@@ -852,4 +858,10 @@
   function aCarrito() {
     window.location.href = "GoM-Carrito.html";
   }
+
+  function aMisProductos() {
+    window.location.href = "GoM-MisProductos.html";
+  }
+
+
 </script>

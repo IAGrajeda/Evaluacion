@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cbc9b94959.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav
+      class="hidden fixed top-0 w-full bg-zinc-200 z-50 sm:hidden md:block md:flex md:fixed"
+    >
+      <div class="flex items-center font-semibold mx-12">
+        <div class="flex h-12">
+          <div
+            id="menu-btn"
+            class="flex bg-[#fed700] h-full items-center gap-6 px-6 transition-all duration-700 hover:bg-yellow-500 font-bold"
+          >
+            <iconify-icon
+              icon="material-symbols:menu"
+              width="30"
+            ></iconify-icon>
+            Departamentos
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Compras
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Pagina
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Blog
+          </div>
+          <div
+            class="flex gap-3 items-center h-full px-6 transition-all duration-700 hover:bg-zinc-200"
+          >
+            Contactanos
+          </div>
+        </div>
+        <div class="flex gap-6 pl-96">
+          <iconify-icon
+            onclick="aMisProductos()"
+            icon="material-symbols:sell-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:cards-heart-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <iconify-icon
+            onclick="aCarrito()"
+            icon="material-symbols:shopping-cart-outline"
+            width="30"
+            class="hover:text-blue-700 animate-bounce"
+          ></iconify-icon>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex justify-between items-center mx-6 py-2 md:hidden">
+      <iconify-icon
+        icon="material-symbols:menu"
+        width="30"
+        id="menu-btn2"
+      ></iconify-icon>
+      <img src="source/gomarket2.png" alt="gomarketico" class="h-14" />
+      <div>
+        <iconify-icon
+          icon="material-symbols:search"
+          width="30"
+          id="search"
+        ></iconify-icon>
+        <iconify-icon
+          class="animate-bounce text-red-500"
+          icon="material-symbols:shopping-cart-outline"
+          width="30"
+          onclick="aCarrito()"
+        ></iconify-icon>
+      </div>
+    </div>
+
+    <div
+      class="hidden justify-between px-12 pt-20 pb-2 z-2 sm:hidden md:block md:flex"
+    >
+      <img src="source/gomarket.png" alt="gomarketico" class="h-12" id="back" />
+      <form class="flex" action="#" method="get">
+        <input
+          type="text"
+          placeholder="Buscar productos"
+          class="w-[600px] border-2 border-zinc-500 rounded-l-[5px] h-[50px] px-3 hover:border-yellow-400 focus:border-yellow-400 focus:outline-none"
+        />
+        <div
+          class="bg-zinc-700 w-[80px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-[50px] hover:bg-yellow-400 hover:text-zinc-700"
+        >
+          Buscar
+        </div>
+      </form>
+      <div class="flex justify-center items-center gap-3">
+        <i class="fa-solid fa-phone fa-2xl"></i>
+        <div
+          class="flex justify-center text-zinc-700 items-center bg-[#fed700] h-[50px] rounded-3xl font-[verdana] font-semibold flex-col p-1 w-60 hover:bg-zinc-500 hover:text-white"
+        >
+          Llama Ahora!
+          <div class="font-normal">+52 445-155-5152</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="menu"
+      class="fixed z-50 left-0 top-0 h-full w-64 bg-gray-700 transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <button id="close-btn" class="p-2 bg-gray-500 w-full text-white mt-20">
+        Cerrar menú
+      </button>
+      <div class="flex flex-col m-6 text-white font-semibold cursor-pointer">
+        <div
+          onclick="aInicio()"
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon icon="material-symbols:home" width="30"></iconify-icon>
+          <h2 class="cursor-pointer">Inicio</h2>
+        </div>
+        <div
+          onclick="aCarrito()"
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="material-symbols:shopping-basket-outline"
+            width="30"
+          ></iconify-icon>
+          <h2 class="cursor-pointer">Carrito</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="mdi:book-open-page-variant-outline"
+            width="30"
+          ></iconify-icon>
+          <h2 class="cursor-pointer">Pagina</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+        >
+          <iconify-icon
+            icon="material-symbols:favorite-outline"
+            width="30"
+          ></iconify-icon>
+          <h2 class="cursor-pointer">Favoritos</h2>
+        </div>
+        <div
+          class="border-b-2 border-zinc-600 p-2 flex justify-start items-center gap-6 hover:text-orange-400 hover:border-orange-500"
+          onclick="aIniciarSesion()"
+        >
+          <iconify-icon
+            onclick="aMisProductos()"
+            icon="material-symbols:sell-outline"
+            width="30"
+            class="hover:text-blue-700"
+          ></iconify-icon>
+          <h2 class="cursor-pointer">Mis productos</h2>
+        </div>
+
+        <div class="p-2 mt-16 flex font-semibold items-center gap-2">
+          <div class="flex items-center">
+            <iconify-icon
+              icon="material-symbols:phone-enabled-sharp"
+              width="30"
+              flip="horizontal"
+            ></iconify-icon>
+            <h2>Contacto</h2>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start text-sm items-center font-normal"
+        >
+          <div class="flex items-center">
+            <iconify-icon
+              icon="material-symbols:phone-android-outline"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>Telefono: +52 445-155-5152</h2>
+          </div>
+        </div>
+        <div class="flex flex-col text-sm items-center font-normal">
+          <div class="flex justify-start items-center">
+            <iconify-icon
+              icon="material-symbols:mail-outline"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>hello@queteimporta.com</h2>
+          </div>
+        </div>
+        <div class="flex flex-col text-sm items-center font-normal">
+          <div class="flex justify-start items-center">
+            <iconify-icon
+              icon="material-symbols:share-location"
+              width="30"
+              class=""
+            ></iconify-icon>
+            <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="">
+        <div class="flex items-center justify-center flex-col mt-10 ">
+            <iconify-icon icon="mdi:account-outline" width="90" class="bg-blue-400 rounded-full"></iconify-icon>
+            <h2 class="font-[Verdana] text-xl md:text-3xl"> Tienda de: User</h2>
+        </div>
+        <div class="flex justify-center items-center mt-16 font-[Verdana] font-semibold">
+            <h2>Tus Productos</h2>
+        </div>
+        <div class="mx-6 pt-6 flex flex-col gap-3 md:justify-center md:items-center ">
+            <div class="flex h-36 bg-zinc-100 rounded-md md:w-[70%] md:h-40 ">
+                <img src="source/camara1.jpg" alt="camara" class="h-36 md:h-40">
+                <div class="flex flex-col p-2  text-sm md:text-lg w-[80%]">
+                    <h2 class="font-bold ">TP-Link Tapo TC70, Cámara Wi-Fi de Seguridad Interior</h2>
+                    <h2 class="text-green-500">Disponible</h2>
+                    <h2 class="text-[10px] md:text-sm">Tipo: Cámara Wi-Fi</h2>
+                    <h2 class="font-semibold">Unidades: 1pz</h2>
+                    
+                </div>
+                <div class="pr-6 pt-6 font-bold md:text-xl md:pl-20 md:flex mf">
+                    <h2>$599.00</h2>
+                    <div class="flex flex-col justify-center items-center py-2 gap-2">
+                        <iconify-icon icon="material-symbols:edit" width="30" class="text-yellow-400 border-2 border-yellow-400 rounded-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:delete-forever-outline" width="30" class="text-red-500 border-2 border-red-500 rounded-lg"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="flex h-36 bg-zinc-100 rounded-md md:w-[70%] md:h-40 ">
+                <img src="source/audifonos11.jpg" alt="audifonos11" class="h-36 md:h-40">
+                <div class="flex flex-col p-2  text-sm md:text-lg w-[80%]">
+                    <h2 class="font-bold ">Sony EX14AP Audífonos con micrófono In-Ear manos libres</h2>
+                    <h2 class="text-green-500">Disponible</h2>
+                    <h2 class="text-[10px] md:text-sm">Estilo: In-Ear Manos Libres</h2>
+                    <h2 class="font-semibold">Unidades: 1pz</h2>
+                </div>
+                <div class="pr-6 pt-6 font-bold md:text-xl md:pl-20 md:flex">
+                    <h2>$99.00</h2>
+                    <div class="flex flex-col justify-center items-center py-2 gap-2">
+                        <iconify-icon icon="material-symbols:edit" width="30" class="text-yellow-400 border-2 border-yellow-400 rounded-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:delete-forever-outline" width="30" class="text-red-500 border-2 border-red-500 rounded-lg"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="flex h-36 bg-zinc-100 rounded-md md:w-[70%] md:h-40 ">
+                <img src="source/hub1.jpg" alt="audifonos11" class="h-36 md:h-40 w-[118px]">
+                <div class="flex flex-col p-2  text-sm md:text-lg w-[80%]">
+                    <h2 class="font-bold ">Lostrain Hub USB C 3.0, 7 en 2 Adaptador multipuerto Tipo C</h2>
+                    <h2 class="text-green-500">Disponible</h2>
+                    <h2 class="text-[10px] md:text-sm">Tipo: Multipuerto Tipo C</h2>
+                    <h2 class="font-semibold">Unidades: 1pz</h2>
+                    
+                </div>
+                <div class="pr-6 pt-6 font-bold md:text-xl md:pl-20 md:flex">
+                    <h2>$800.00</h2>
+                    <div class="flex flex-col justify-center items-center py-2 gap-2">
+                        <iconify-icon icon="material-symbols:edit" width="30" class="text-yellow-400 border-2 border-yellow-400 rounded-lg"></iconify-icon>
+                        <iconify-icon icon="material-symbols:delete-forever-outline" width="30" class="text-red-500 border-2 border-red-500 rounded-lg"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center mt-10">
+                <button class="bg-green-500 rounded-md w-[90%] h-12 text-xl font-bold hover:bg-green-600">Añadir producto</button>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div
+      class="bg-yellow-400 mt-6 h-auto flex flex-col gap-3 justify-center items-center md:flex-row"
+    >
+      <h2
+        class="text-lg text-zinc-700 pt-3 font-semibold md:text-md md:p-6 md:flex md:justify-center"
+      >
+        Suscríbase a nuestro boletín informativo
+      </h2>
+      <div class="flex sm:w-full sm:justify-center sm:px-14">
+        <input
+          type="text"
+          placeholder="Aqui tu correo"
+          class="border-2 border-zinc-500 rounded-l-sm h-10 px-3 focus:outline-none sm:w-full"
+        />
+        <div
+          class="bg-zinc-700 w-[100px] flex justify-center items-center rounded-r-[5px] text-white font-['Verdana'] h-10 hover:bg-blue-400"
+        >
+          Suscribirse
+        </div>
+      </div>
+      <div class="flex gap-6 py-3 text-zinc-700 md:pr-20">
+        <iconify-icon
+          icon="mdi:twitter"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:facebook"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:pinterest"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="mdi:instagram"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+        <iconify-icon
+          icon="uil:tumblr-square"
+          width="30"
+          class="hover:text-blue-500"
+        ></iconify-icon>
+      </div>
+    </div>
+
+    <footer
+      class="flex flex-col justify-start items-baseline md:flex-row md:justify-center pb-20 pt-6 md:items-center"
+    >
+      <div class="flex flex-col text-zinc-700 w-full">
+        <h2 class="font-bold text-xl">Contacto</h2>
+        <div class="pl-6">
+          <h2 class="font-bold">Llamanos</h2>
+          <div class="flex">
+            <iconify-icon
+              icon="material-symbols:phone-android-outline"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>Telefono: +52 445-155-5152</h2>
+          </div>
+          <div class="flex">
+            <iconify-icon
+              icon="material-symbols:mail-outline"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>hello@queteimporta.com</h2>
+          </div>
+          <h2 class="font-bold">Encuentranos</h2>
+          <div class="flex">
+            <iconify-icon
+              icon="material-symbols:share-location"
+              width="30"
+              class="text-zinc-600"
+            ></iconify-icon>
+            <h2>Calle: Midwitch, Silent Hill, EU.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700 w-full">
+        <h2 class="text-xl font-bold">Informacion de la Empresa</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mi cuenta</h2>
+          <h2 class="hover:text-blue-500">Seguimiento de pedidos</h2>
+          <h2 class="hover:text-blue-500">Preguntas frecuentes</h2>
+          <h2 class="hover:text-blue-500">Métodos de pago</h2>
+          <h2 class="hover:text-blue-500">Guía de envío</h2>
+          <h2 class="hover:text-blue-500">Productos</h2>
+          <h2 class="hover:text-blue-500">Saldo de la tarjeta regalo</h2>
+          <h2 class="hover:text-blue-500">Contacte con nosotros</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700 w-full">
+        <h2 class="text-xl font-bold">Mas de nosotros</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Acerca de GoMarket</h2>
+          <h2 class="hover:text-blue-500">Garantías</h2>
+          <h2 class="hover:text-blue-500">Condiciones de uso</h2>
+          <h2 class="hover:text-blue-500">Política de privacidad</h2>
+          <h2 class="hover:text-blue-500">Política de devoluciones</h2>
+          <h2 class="hover:text-blue-500">Entrega y devolución</h2>
+          <h2 class="hover:text-blue-500">Mapa del sitio</h2>
+          <h2 class="hover:text-blue-500">Iniciar sesión o registrarse</h2>
+        </div>
+      </div>
+      <div class="flex flex-col text-zinc-700 w-full">
+        <h2 class="text-xl font-bold">Atencion al cliente</h2>
+        <div class="pl-6">
+          <h2 class="hover:text-blue-500">Mujer (15)</h2>
+          <h2 class="hover:text-blue-500">Accesorios (16)</h2>
+          <h2 class="hover:text-blue-500">Arte (3)</h2>
+          <h2 class="hover:text-blue-500">Ropa (9)</h2>
+          <h2 class="hover:text-blue-500">Camisas (1)</h2>
+          <h2 class="hover:text-blue-500">Hombre (11)</h2>
+          <h2 class="hover:text-blue-500">Vestidos (9)</h2>
+          <h2 class="hover:text-blue-500">Digital (5)</h2>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
+<script>
+ const menuBtn = document.getElementById("menu-btn");
+  const menuBtn2 = document.getElementById("menu-btn2");
+  const menu = document.getElementById("menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("-translate-x-full");
+  });
+
+  menuBtn2.addEventListener("click", () => {
+    menu.classList.toggle("-translate-x-full");
+  });
+
+  const closeBtn = document.getElementById("close-btn");
+  const menucerrar = document.getElementById("menu");
+
+  closeBtn.addEventListener("click", () => {
+    menucerrar.classList.add("-translate-x-full");
+  });
+
+  document.getElementById("cambiarDiv").addEventListener("click", function () {
+    document.getElementById("div1").classList.toggle("hidden");
+    document.getElementById("div2").classList.toggle("hidden");
+  });
+
+  document.getElementById("cambiarDiv2").addEventListener("click", function () {
+    document.getElementById("div2").classList.toggle("hidden");
+    document.getElementById("div1").classList.toggle("hidden");
+  });
+
+  function aIniciarSesion() {
+    window.location.href = "GoM-Sesion.html";
+  }
+
+  function aCarrito() {
+    window.location.href = "GoM-Carrito.html";
+  }
+
+  function aMisProductos() {
+    window.location.href = "GoM-MisProductos.html";
+  }
+
+  function aAñadirProducto() {
+    window.location.href = "AñadirProducto.html";
+  }
+</script>
